@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScriptを始めよう</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.10/purify.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="site-title">JavaScriptを始めよう</h1>
+    </header>
+
+    <div id="container">
+      <!-- 📚 サイドバーナビゲーション -->
+      <nav id="sidebar">
+        <h2>ナビゲーション</h2>
+        <ul>
+          <li class="nav-category">📖 前書き</li>
+          <ul id="preface-list"></ul>
+          <li class="nav-category">📚 章一覧</li>
+          <ul id="chapter-list"></ul>
+          <li class="nav-category">📄 付録</li>
+          <ul id="appendix-list"></ul>
+          <li class="nav-category">📖 用語集</li>
+          <ul id="glossary-list"></ul>
+          <li class="nav-category">📝 コラム</li>
+          <ul id="column-list"></ul>
+          <li class="nav-category">💻 サンプルコード</li>
+          <ul id="sample-list"></ul>
+          <li class="nav-category">🎯 演習</li>
+          <ul id="task-list"></ul>
+          <li class="nav-category">❓ クイズ</li>
+          <ul id="quiz-list"></ul>
+        </ul>
+      </nav>
+
+      <!-- 📖 コンテンツ表示エリア -->
+      <main id="content">
+        <h1 id="content-title">JavaScriptを始めよう</h1>
+        <section id="content-body"></section>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2025 JavaScript入門</p>
+    </footer>
+
+    <!-- 🔹 JavaScript -->
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/content-loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

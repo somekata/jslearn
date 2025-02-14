@@ -1,0 +1,213 @@
+/* 📌 明るくモダンなデザイン */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --accent-color: #ff4081;
+    --light-gray: #dcdcdc;
+    --dark-gray: #ffffff;
+    --border-radius: 8px;
+    --font-main: 'Inter', 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    margin-left: 20px;
+    padding: 0;
+    width:90%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 📌 ヘッダー */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1100;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* 🔹 ヘッダーを上に隠す（アニメーション） */
+header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* 📌 ナビゲーション */
+nav {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--dark-gray);
+    padding: 20px;
+    position: fixed;
+    left: -260px; /* 🔹 デフォルトは隠す */
+    top: 0;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* 🔹 ナビゲーションが開いた時 */
+nav.open {
+    left: 0;
+}
+
+/* 📌 ナビゲーションのリスト */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 5px 0;
+    transition: background 0.3s ease;
+    border-radius: var(--border-radius);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    display: block;
+}
+
+nav ul li:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* 📌 ナビゲーションを開くボタン */
+#nav-toggle {
+    position: fixed;
+    left: 10px;
+    top: 70px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    border: none;
+    z-index: 1300;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 📌 コンテンツエリア */
+main {
+    margin-left: 0;
+    padding: 80px 40px; /* ヘッダーの高さを考慮 */
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+p {
+    text-indent: 1em;  
+}
+
+.left {
+    text-align: left;
+    margin-left: 10px;
+    color: #333;
+}
+
+/* 📌 chapter タイトルが隠れないよう調整 */
+#content-title {
+    margin-top: 80px; /* 🔹 ヘッダーと被らないように余白を追加 */
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* 📌 コードブロック（スライド可能にする） */
+pre {
+    background: #e0e0e0;
+    color: #333;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    font-family: monospace;
+}
+
+/* 📌 ボタン */
+button {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #d81b60;
+}
+
+/* 📌 フッター */
+footer {
+    width: 100%;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* 📌 スマホ対応 */
+@media (max-width: 768px) {
+    main {
+        padding: 100px 20px;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* 📌 テーブルのスタイル */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.content-table thead {
+    background-color: #ff4081;
+    color: white;
+}
+
+.content-table th, .content-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.content-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.more-section {
+    background-color: #fffcfc; /* ✅ とても薄いピンク */
+    border-radius: 12px; /* ✅ 角を丸くする */
+    padding: 15px; /* ✅ 内側の余白を適用 */
+    margin-top: 20px; /* ✅ 上部の余白を確保 */
+    border: 1px solid #ffcccc; /* ✅ 少し薄いピンクの枠線 */
+}
