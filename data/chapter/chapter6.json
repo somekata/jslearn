@@ -1,0 +1,272 @@
+{
+    "title": "第6章: 変数と定数（let、const、var）",
+    "description": [
+        {
+            "type": "p",
+            "text": "JavaScriptでは、データを保存するために変数を使います。この章では、`let`、`const`、`var`を使った変数の宣言方法と、それらの違いについて学びます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "1. 変数の種類",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "変数には、グローバル変数とローカル変数の2種類があります。それぞれの違いについて説明します。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"グローバル変数"
+                    }
+                },
+                {
+                    "type": "p",
+                    "text": "グローバル変数は、プログラム全体でアクセス可能な変数です。関数やブロックの外側で宣言された変数は、グローバルスコープに属します。"
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let globalVar = \"I am global\";\n\nfunction accessGlobal() {\n    console.log(globalVar);\n}\n\naccessGlobal();\nconsole.log(globalVar);"
+                },
+                {
+                    "type": "p",
+                    "text": "ローカル変数は、特定の関数やブロック内でのみ有効な変数です。ローカル変数を使うことで、変数の影響範囲を限定でき、予期しない干渉を防ぐことができます。"
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "function localExample() {\n    let localVar = \"I am local\";\n    console.log(localVar);\n}\n\nlocalExample();\nconsole.log(localVar); // エラー"
+                }
+            ]
+        },
+        {
+            "title": "2. 変数の宣言方法",
+            "content": [
+                {
+                    "type": "boldtext",
+                    "text": "letによる変数宣言"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "let は、再代入可能な変数を宣言する際に使います。`let`で宣言された変数は、ブロックスコープ内でのみ有効です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let score = 10;\nscore = 15;  // 再代入が可能"
+                },
+                {
+                    "type": "boldtext",
+                    "text": "constによる定数の宣言"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "const は、定数を宣言するために使用します。`const`で宣言された変数には再代入できません。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const pi = 3.14;\npi = 3.15;  // エラー"
+                },
+                {
+                    "type": "boldtext",
+                    "text": "varによる変数宣言"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "var は、従来のJavaScriptで使われていた変数宣言方法です。現在では、`let`や`const`の使用が推奨されています。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "var name = \"Alice\";\nname = \"Bob\";  // 再代入が可能"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "3. スコープ（有効範囲）の違い",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "変数が有効な範囲（スコープ）は、変数をどのように宣言するかによって異なります。`let`と`const`は**ブロックスコープ**を持ち、`var`は**関数スコープ**を持ちます。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"ブロックスコープ"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "if (true) {\n    let localVar = \"ローカル\";\n    console.log(localVar);\n}\nconsole.log(localVar);  // エラー"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"ブロックスコープ"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "function testVar() {\n    var globalVar = \"グローバル\";\n    if (true) {\n        var globalVar = \"上書き\";\n        console.log(globalVar);\n    }\n    console.log(globalVar);\n}"
+                }
+            ]
+        },
+        {
+            "title": "4. 変数の宣言方法まとめ",
+            "content": [
+                {
+                    "type": "table",
+                    "headers": [
+                        "変数",
+                        "再宣言",
+                        "再代入",
+                        "スコープ"
+                    ],
+                    "rows": [
+                        [
+                            "var",
+                            "〇",
+                            "〇",
+                            "関数スコープ"
+                        ],
+                        [
+                            "let",
+                            "×",
+                            "〇",
+                            "ブロックスコープ"
+                        ],
+                        [
+                            "const",
+                            "×",
+                            "×",
+                            "ブロックスコープ"
+                        ]
+                    ]
+                }
+            ],
+            "id": 4
+        },
+        {
+            "title": "5. 複数の変数を代入する方法",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": 
+                    [""],
+                    "attributes":{
+                        "boldtext":"複数の値の代入"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let a = 1, b = 2;\nconsole.log(a); // 1\nconsole.log(b); // 2"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": 
+                    [""],
+                    "attributes":{
+                        "boldtext":"分割代入"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let [a, b] = [1, 2];\nconsole.log(a); // 1\nconsole.log(b); // 2"
+                }
+                ,
+                {
+                    "type": "p",
+                    "paragraphs": 
+                    [""],
+                    "attributes":{
+                        "boldtext":"配列の代入"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let arr1 = [1, 2, 3], arr2 = [4, 5, 6];\nconsole.log(arr1); // [1, 2, 3]\nconsole.log(arr2); // [4, 5, 6]"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": 
+                    [""],
+                    "attributes":{
+                        "boldtext":"配列の分割代入"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let [arr1, arr2] = [[1, 2, 3], [4, 5, 6]];\nconsole.log(arr1); // [1, 2, 3]\nconsole.log(arr2); // [4, 5, 6]"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": 
+                    [""],
+                    "attributes":{
+                        "boldtext":"オブジェクトの代入"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let a = { x: 1 }, b = { y: 2 };\nconsole.log(a); // { x: 1 }\nconsole.log(b); // { y: 2 }"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": 
+                    [""],
+                    "attributes":{
+                        "boldtext":"オブジェクトの分割代入"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let [a, b] = [{ x: 1 }, { y: 2 }];\nconsole.log(a); // { x: 1 }\nconsole.log(b); // { y: 2 }"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": 
+                    [""],
+                    "attributes":{
+                        "boldtext":"オブジェクトのプロパティの分割代入"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let obj = { x: 1, y: 2 };\nlet { x: a, y: b } = obj;\nconsole.log(a); // 1\nconsole.log(b); // 2"
+                }
+            ],
+            "id": 5
+        }
+    ]
+}

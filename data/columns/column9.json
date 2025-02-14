@@ -1,0 +1,58 @@
+{
+    "title": "JSとPythonの変数、構文、配列の比較",
+    "description": [
+        "JavaScript（JS）とPythonは、どちらも広く使われている人気の高いプログラミング言語です。",
+        "どちらも異なる特性を持っているため、それぞれの用途に応じて選択されます。",
+        "ここでは、JSとPythonの変数の扱い方、基本的な構文、配列操作の違いを比較してみましょう。"
+    ],
+    "sections": [
+        {
+            "title": "変数の宣言",
+            "content": []
+        },
+        {
+            "title": "Pythonの変数",
+            "content": []
+        },
+        {
+            "title": "条件分岐の比較",
+            "content": []
+        },
+        {
+            "title": "Pythonの条件分岐",
+            "content": []
+        },
+        {
+            "title": "ループの比較",
+            "content": []
+        },
+        {
+            "title": "Pythonのループ",
+            "content": []
+        },
+        {
+            "title": "JavaScriptの配列",
+            "content": []
+        },
+        {
+            "title": "Pythonのリスト",
+            "content": []
+        },
+        {
+            "title": "Pythonのタプル",
+            "content": []
+        },
+        {
+            "title": "Pythonの辞書",
+            "content": []
+        },
+        {
+            "title": "JavaScriptのオブジェクト",
+            "content": []
+        },
+        {
+            "title": "データ構造の比較",
+            "content": []
+        }
+    ]
+}

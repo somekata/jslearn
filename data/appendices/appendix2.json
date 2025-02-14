@@ -1,0 +1,99 @@
+{
+  "title": "第1章 - HTML、CSS、JavaScriptの基本",
+  "description": [
+    {
+      "type": "p",
+      "text": "付録2　CSSのサンプル"
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. レイアウト関連",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n- display：要素の表示方法を指定します。\n    - block、inline、inline-block、flex、grid、none などが代表的です。\n    - 例: display: block;\n- position：要素の位置を指定します。\n    - static、relative、absolute、fixed、sticky などがあります。\n    - 例: position: absolute; top: 20px; left: 20px;\n- float：要素を左右に浮かせるためのプロパティ。\n    - left、right、none\n    - 例: float: left;\n- flex：フレックスボックスでレイアウトを作るために使います。\n    - 例: display: flex; justify-content: center; align-items: center;\n- grid：グリッドレイアウトを作るためのプロパティ。\n    - 例: display: grid; grid-template-columns: 1fr 2fr;\n        "
+        }
+      ],
+      "id": 1
+    },
+    {
+      "title": "2. サイズとスペース関連",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n- width / height：要素の幅や高さを指定します。\n    - 例: width: 100%; height: 200px;\n- max-width / max-height：最大の幅や高さを設定します。\n    - 例: max-width: 100%;\n- margin：外側の余白を指定します。margin: auto で中央寄せも可能。\n    - 例: margin: 10px; または margin: 10px 20px;\n- padding：内側の余白を指定します。\n    - 例: padding: 20px;\n- box-sizing：要素の幅や高さにパディングやボーダーを含めるかどうかを指定します。\n    - content-box (デフォルト)、border-box\n    - 例: box-sizing: border-box;\n        "
+        }
+      ],
+      "id": 2
+    },
+    {
+      "title": "3. 背景と色の関連",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n- background-color：背景色を指定します。2つの記載方法があります。\n    - 例: background-color: #f4f4f4;\n    - 例: background-color: rgba(255, 255, 255, 0.8);\n- background-image：背景画像を指定します。\n    - 例: background-image: url('image.jpg');\n- background-size：背景画像のサイズを指定します。\n    - 例: background-size: cover;\n- color：テキストの色を指定します。\n    - 例: color: #333;\n- opacity：透明度を指定します。\n    - 例: opacity: 0.8;\n        "
+        }
+      ],
+      "id": 3
+    },
+    {
+      "title": "4. テキスト関連",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n- font-size：フォントサイズを指定します。\n    - 例: font-size: 16px;\n- font-family：フォントの種類を指定します。\n    - 例: font-family: Arial, sans-serif;\n- font-weight：フォントの太さを指定します。\n    - 例: font-weight: bold;\n- line-height：行間の高さを指定します。\n    - 例: line-height: 1.6;\n- text-align：テキストの配置を指定します。\n    - 例: text-align: center;\n- text-decoration：テキストに下線や取り消し線を追加します。\n    - 例: text-decoration: underline;\n- letter-spacing / word-spacing：文字や単語の間隔を指定します。\n    - 例: letter-spacing: 1px;\n        "
+        }
+      ],
+      "id": 4
+    },
+    {
+      "title": "5. ボーダーやシャドウ",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n- border：要素のボーダーを設定します。\n    - 例: border: 1px solid #ccc;\n- border-radius：角を丸くします。\n    - 例: border-radius: 5px;\n- box-shadow：要素に影を付けます。\n    - 例: box-shadow: 0 4px 8px rgba(0,0,0,0.2);\n        "
+        }
+      ],
+      "id": 5
+    },
+    {
+      "title": "6. トランジション・アニメーション",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n- transition：要素が変化する際のトランジション効果を指定します。\n    - 例: transition: all 0.3s ease-in-out;\n- animation：要素にアニメーション効果を付けます。\n    - 例: animation: fadeIn 2s ease-in;\n        "
+        }
+      ],
+      "id": 6
+    },
+    {
+      "title": "7. レスポンシブデザイン",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n- @media：メディアクエリを使用して、画面サイズに応じたスタイルを適用します。\n    - 例:\n    @media (max-width: 600px) {\n        body {\n            background-color: lightblue;\n        }\n    }\n        "
+        }
+      ],
+      "id": 7
+    },
+    {
+      "title": "8. その他の便利なプロパティ",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n- z-index：要素の重なり順を指定します。数値が大きいほど前面に表示されます。\n    - 例: z-index: 100;\n- visibility：要素を非表示にするが、レイアウトには残す。\n    - 例: visibility: hidden;\n- overflow：コンテンツが要素の領域を超えた場合の表示方法を指定します。\n    - hidden、scroll、auto\n    - 例: overflow: hidden;\n        "
+        }
+      ],
+      "id": 8
+    }
+  ]
+}

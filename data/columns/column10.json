@@ -1,0 +1,66 @@
+{
+    "title": "配列操作の名称が直感的ではない理由",
+    "sections": [
+        {
+            "title": "1. push と pop",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "由来\nこれらの用語は、スタックというデータ構造に由来しています。スタックは**LIFO（Last In, First Out）**の性質を持ち、以下のように操作が定義されています：",
+                        "push: スタックの上に新しい要素を「押し込む」操作。\n→ 配列の末尾に要素を追加する。\npop: スタックの上から要素を「取り出す」操作。\n→ 配列の末尾から要素を削除する。\nイメージ\npush は、押し込むように「上に追加」。\npop は、上から「ポンッ」と要素を取り除く。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let stack = [];\nstack.push(1); // [1]\nstack.push(2); // [1, 2]\nstack.pop();   // [1]"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "2. shift と unshift",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "由来\nこれらは**キュー（queue）というデータ構造に由来しています。キューはFIFO（First In, First Out）**の性質を持ち、以下のような操作が定義されています：\nshift: キューの先頭の要素を「シフトして」取り出す操作。\n→ 配列の先頭の要素を削除して戻す。",
+                        "unshift: キューの先頭に要素を「押し込む」操作。\n→ 配列の先頭に要素を追加する。",
+                        "イメージ\nshift は、列（queue）から「先頭が押し出される」感じ。\nunshift は、列の先頭に新しい人が「割り込む」感じ。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let queue = [];\nqueue.unshift(1); // [1]\nqueue.unshift(2); // [2, 1]\nqueue.shift();    // [1]"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "3. なぜ直感的でないのか？",
+            "content": [
+                {
+                    "type": "list",
+                    "liststyle": "ordered",
+                    "items": [
+                        {
+                            "text": "英単語としての意味がピンとこない",
+                            "details": "push や pop は、英語としては直感的ですが、特にプログラミング初学者には「末尾操作」のイメージと結びつきにくいです。 shift と unshift はさらに難解で、日常英語でもあまり使われません。"
+                        },
+                        {
+                            "text": "背景に特化した知識が必要",
+                            "details": "これらの名前は、スタックやキューといったデータ構造を知らないと、命名の意図が理解しにくいです。"
+                        },
+                        {
+                            "text": "操作位置が直感的でない",
+                            "details": "push や pop は末尾を操作しますが、日常的には「先頭を操作するイメージ」が強い場合があります。 shift と unshift は先頭を操作しますが、「末尾との関連性」が薄いため混乱を招きがちです。"
+                        }
+                    ]
+                }
+            ],
+            "id": 3
+        }
+    ]
+}

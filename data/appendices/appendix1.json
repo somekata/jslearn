@@ -1,0 +1,55 @@
+{
+  "title": "第1章 - HTML、CSS、JavaScriptの基本",
+  "description": [
+    {
+      "type": "p",
+      "text": "付録1　HTMLのサンプル"
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. HTMLの基本構造",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n<!DOCTYPE html>\n<html lang=\"ja\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>サンプルページ</title>\n  </head>\n  <body>\n    <h1>HTMLの基本構造</h1>\n    <p>このページは、HTMLの基本構造を説明しています。</p>\n    <a href=\"index.html\">ホームに戻る</a>\n  </body>\n</html>\n        "
+        }
+      ],
+      "id": 1
+    },
+    {
+      "title": "2. HTML要素の例",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n<h1>見出し1</h1>\n<p>これは段落の例です。</p>\n<a href=\"https://example.com\">リンクの例</a>\n<ul>\n  <li>リストの項目1</li>\n  <li>リストの項目2</li>\n  <li>リストの項目3</li>\n</ul>\n\n<!-- 順序付きリスト (ol) の例 -->\n<ol>\n  <li>順序付きリストの項目1</li>\n  <li>順序付きリストの項目2</li>\n  <li>順序付きリストの項目3</li>\n</ol>\n\n<!-- 定義リスト (dl) の例 -->\n<dl>\n  <dt>定義語1</dt>\n  <dd>定義語1の説明</dd>\n  <dt>定義語2</dt>\n  <dd>定義語2の説明</dd>\n</dl>\n        "
+        }
+      ],
+      "id": 2
+    },
+    {
+      "title": "3. フォーム要素の例",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n<form action=\"/submit\" method=\"post\">\n  <label for=\"name\">名前:</label>\n  <input type=\"text\" id=\"name\" name=\"name\"><br><br>\n  \n  <label for=\"email\">メール:</label>\n  <input type=\"email\" id=\"email\" name=\"email\"><br><br>\n  \n  <input type=\"submit\" value=\"送信\">\n</form>\n        "
+        }
+      ],
+      "id": 3
+    },
+    {
+      "title": "4. テーブルの例",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "\n<table border=\"1\">\n  <tr>\n    <th>ヘッダー1</th>\n    <th>ヘッダー2</th>\n  </tr>\n  <tr>\n    <td>データ1-1</td>\n    <td>データ1-2</td>\n  </tr>\n  <tr>\n    <td>データ2-1</td>\n    <td>データ2-2</td>\n  </tr>\n</table>\n        "
+        }
+      ],
+      "id": 4
+    }
+  ]
+}

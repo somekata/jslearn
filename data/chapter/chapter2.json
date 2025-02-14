@@ -1,0 +1,190 @@
+{
+    "title": "第2章: HTMLの基本",
+    "description": [
+        {
+            "type": "p",
+            "text": "HTML（HyperText Markup Language）は、Webページの基礎を作る言語です。この章では、HTMLの基本的な構造や要素について学んでいきます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "1. HTMLタグの構造",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "HTMLはタグで構成されており、各タグは要素を囲んでいます。HTML文書は<html>タグで始まり、<body>タグの中にページの内容が書かれます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<html>\n  <head>\n    <title>ページのタイトル</title>\n  </head>\n  <body>\n    <h1>見出し1</h1>\n    <p>段落テキスト</p>\n  </body>\n</html>"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "2. ブロック要素とインライン要素",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "HTML要素には、ブロック要素とインライン要素があります。ブロック要素は、ページ全体で一つの大きな領域を占め、次の要素は新しい行から始まります。例えば、<div>や<p>タグはブロック要素です。一方、インライン要素は、要素の間に新しい行を作らずに他の要素と一緒に配置されます。<span>や<a>タグがインライン要素です。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "class": "left bold",
+                        "boldtext": "ブロック要素の例"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<div>\n  <h1>ブロック要素の見出し</h1>\n  <p>これはブロック要素の段落です。</p>\n</div>"
+                },
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "class": "left",
+                        "boldtext": "インライン要素の例"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<p>\n  このテキストには <span>インライン要素</span> が含まれています。\n</p>"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "3. 属性とプロパティ",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "HTMLタグは属性を持つことができ、これにより要素に追加情報を与えて、見た目や動作を制御します。例えば、<a>タグにはhref属性があり、リンク先のURLを指定します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<a href=\"https://example.com\">こちらをクリック</a>"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "また、<input>タグにはvalue属性があり、要素の初期状態を指定します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<input type=\"text\" value=\"初期値\">"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "一方、JavaScriptでは、HTMLの属性がDOMのプロパティとして扱われます。これにより、要素の状態を動的に操作することができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "document.querySelector('input').value = \"新しい値\";"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "この場合、valueプロパティが \"新しい値\" に変更されます。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "class": "left",
+                        "boldtext": "HTMLとDOMの関係"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "HTMLの属性（valueなど）は、ページが読み込まれた後に、HTML要素がDOM（Document Object Model）に変換されます。その結果、DOMのプロパティとして扱われ、JavaScriptから操作可能になります。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "class": "left",
+                        "boldtext": "HTML属性とDOMプロパティの違い"
+                    }
+                },
+                {
+                    "type": "list",
+                    "liststyle": "unordered",
+                    "items": [
+                        "HTML属性は、要素の初期状態を指定するために使用されます。例えば、<input>タグのvalue属性は、ページが読み込まれた時点での初期値を設定します。",
+                        "DOMプロパティは、JavaScriptで操作可能な動的な値です。ページが読み込まれた後に、valueプロパティを変更することができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<input type=\"text\" value=\"初期値\">"
+                },
+                {
+                    "type": "list",
+                    "liststyle": "unordered",
+                    "items": [
+                        "このHTMLでは、value属性は\"初期値\"として設定されています。ページが読み込まれた後、次のようにJavaScriptで変更可能です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "document.querySelector('input').value = \"新しい値\";"
+                },
+                {
+                    "type": "list",
+                    "liststyle": "unordered",
+                    "items": [
+                        "ここで、valueプロパティが\"新しい値\"に変更されますが、HTMLの元のvalue属性は依然として\"初期値\"のままです。"
+                    ]
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "4. コメントの使い方",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "HTML内では、コードの説明やメモを残すためにコメントを使うことができます。コメントはブラウザに表示されませんが、ソースコード上に残しておくことで、後から見直す際の助けになります。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<!-- これはコメントです -->"
+                }
+            ],
+            "id": 4
+        }
+    ]
+}

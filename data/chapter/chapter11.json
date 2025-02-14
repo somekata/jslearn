@@ -1,0 +1,57 @@
+{
+    "title": "第11章: 非同期処理の基礎",
+    "description": [
+        {
+            "type": "p",
+            "text": "JavaScriptはシングルスレッドのため、ある処理が完了するまで次の処理を待つ必要があります。しかし、非同期処理を使うことで、待ち時間の間に他の処理を行うことができます。例えば、サーバーへのリクエストやファイルの読み込みなどが非同期処理に該当します。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "非同期処理とは何か",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptの非同期処理は、長時間かかる処理（例: APIリクエスト、データベースアクセス）をブロックせず、他の処理を続行できる仕組みです。これにより、より効率的なプログラムを作成できます。"
+                    ]
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "Promiseの使い方",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`Promise` は、非同期処理の結果を表すオブジェクトで、成功（`resolve`）か失敗（`reject`）の2つの状態を持ちます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// Promiseを使った非同期処理\nlet myPromise = new Promise((resolve, reject) => {\n    let success = true;\n    if (success) {\n        resolve(\"処理が成功しました！\");\n    } else {\n        reject(\"処理に失敗しました\");\n    }\n});\n\nmyPromise\n    .then(result => console.log(result))\n    .catch(error => console.log(error));"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "async/awaitの使い方",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`async`と`await`を使うことで、非同期処理をより直感的に記述できます。`await`を使うことで、`Promise`の完了を待ってから次の処理を実行できます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// async/awaitを使った非同期処理\nasync function fetchData() {\n    try {\n        let response = await fetch('https://api.example.com/data');\n        let data = await response.json();\n        console.log(data);\n    } catch (error) {\n        console.log(\"エラーが発生しました\", error);\n    }\n}\n\nfetchData();"
+                }
+            ],
+            "id": 3
+        }
+    ]
+}

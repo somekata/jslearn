@@ -1,0 +1,151 @@
+{
+  "title": "付録3 - JavaScriptのサンプル",
+  "description": [
+    {
+      "type": "p",
+      "text": "付録3　JavaScriptのサンプル"
+    }
+  ],
+  "sections": [
+    {
+      "title": "変数とデータ型",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// 変数の宣言\nvar a =0;\nlet number = 10;\nlet text = \"こんにちは\";\nlet isTrue = true;\nconst pageCount = 1;\n\n// コンソールに出力\nconsole.log(number);  // 10\nconsole.log(text);    // \"こんにちは\"\nconsole.log(isTrue);  // true"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "title": "条件分岐",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// 条件分岐の例\nlet score = 85;\n\nif (score >= 90) {\n    console.log(\"優\");\n} else if (score >= 70) {\n    console.log(\"良\");\n} else {\n    console.log(\"可\");\n}"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "title": "繰り返し処理",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// for文の例\nfor (let i = 0; i < 5; i++) {\n    console.log(\"ループ回数: \" + i);\n}\n\n// while文の例\nlet count = 0;\nwhile (count < 5) {\n    console.log(\"カウント: \" + count);\n    count++;\n}"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "title": "\n関数\n",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// 関数の定義\nfunction greet(name) {\n    return \"こんにちは、\" + name + \"さん！\";\n}\n\n// 関数の呼び出し\nlet message = greet(\"太郎\");\nconsole.log(message);  // こんにちは、太郎さん！"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "title": "DOM操作の例",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// DOMの要素を取得して操作\nlet heading = document.getElementById(\"title\");\nheading.textContent = \"新しいタイトル\";\n\n// ボタンをクリックしたときのイベント処理\ndocument.getElementById(\"myButton\").addEventListener(\"click\", function() {\n    alert(\"ボタンがクリックされました！\");\n});"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "title": "オブジェクトと配列",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// オブジェクトの例\nlet person = {\n    name: \"太郎\",\n    age: 25,\n    greet: function() {\n        return \"こんにちは、\" + this.name + \"さん！\";\n    }\n};\n\nconsole.log(person.name);  // 太郎\nconsole.log(person.greet());  // こんにちは、太郎さん！\n\n// 配列の例\nlet fruits = [\"りんご\", \"バナナ\", \"オレンジ\"];\nconsole.log(fruits[0]);  // りんご"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "title": "非同期処理（Promiseとasync/await）",
+      "content": [
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// Promiseを使った非同期処理\nlet promise = new Promise(function(resolve, reject) {\n    let success = true;\n    if (success) {\n        resolve(\"成功しました！\");\n    } else {\n        reject(\"失敗しました...\");\n    }\n});\n\npromise.then(function(result) {\n    console.log(result);  // \"成功しました！\"\n}).catch(function(error) {\n    console.log(error);\n});\n\n// async/awaitを使った非同期処理\nasync function fetchData() {\n    try {\n        let response = await fetch(\"https://api.example.com/data\");\n        let data = await response.json();\n        console.log(data);\n    } catch (error) {\n        console.log(\"エラーが発生しました: \" + error);\n    }\n}"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "title": "consoleオブジェクトの使い方",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          JavaScriptの`console`オブジェクトは、`log`以外にも多くの便利なメソッドを提供しています。以下はそのいくつかの例です。\n        "
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// consoleの便利なメソッド\n\n// エラーを出力\nconsole.error(\"これはエラーメッセージです\");\n\n// 警告を出力\nconsole.warn(\"これは警告メッセージです\");\n\n// 情報を出力\nconsole.info(\"これは情報メッセージです\");\n\n// グループ化して出力\nconsole.group(\"グループ化されたログ\");\nconsole.log(\"ログ1\");\nconsole.log(\"ログ2\");\nconsole.groupEnd();\n\n// 表形式で出力\nlet data = [\n    { 名前: \"太郎\", 年齢: 25 },\n    { 名前: \"花子\", 年齢: 30 }\n];\nconsole.table(data);\n\n// 実行時間を測定\nconsole.time(\"タイマー\");\nfor (let i = 0; i < 1000000; i++) {}  // 適当な処理\nconsole.timeEnd(\"タイマー\");\n\n// スタックトレースを表示\nconsole.trace(\"スタックトレースの例\");\n"
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          これらを使用することで、開発中により詳しい情報を得たり、デバッグ作業を効率化できます。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          コンソールへの表示は、用いるプラットフォーム（例:\n          Node.js、ブラウザの開発者ツール）や記述の仕方によって若干異なることがあります。\n        "
+          ]
+        }
+      ],
+      "id": 8
+    },
+    {
+      "title": "タイマー関数（setTimeoutとsetInterval）",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          JavaScriptでは、一定時間後に処理を実行する`setTimeout`や、一定間隔で処理を繰り返す`setInterval`を使用できます。これらを使うことで、時間制御のある処理が可能です。\n        "
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// setTimeoutの例\nconsole.log(\"処理開始\");\nsetTimeout(function() {\n    console.log(\"2秒後に実行されます\");\n}, 2000);\n\n// setIntervalの例\nlet count = 0;\nlet intervalId = setInterval(function() {\n    console.log(\"1秒ごとに実行されています: \" + count);\n    count++;\n    if (count > 5) {\n        clearInterval(intervalId); // 繰り返しを停止\n        console.log(\"setIntervalが停止されました\");\n    }\n}, 1000);\n"
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          `setTimeout`を再帰的に呼び出すことで、`setInterval`のような繰り返し処理を実現することもできます。\n        "
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "content": "// 再帰的なsetTimeoutの例\nlet counter = 0;\n\nfunction repeat() {\n    if (counter > 5) {\n        console.log(\"再帰的な処理を終了します\");\n        return;\n    }\n    console.log(\"再帰的に実行されています: \" + counter);\n    counter++;\n    setTimeout(repeat, 1000); // 1秒後に再実行\n}\n\nrepeat();\n"
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          タイマーを正しく制御することで、柔軟な時間操作が可能になります。特に`setInterval`や`setTimeout`の使い分けが重要です。\n        "
+          ]
+        }
+      ],
+      "id": 9
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+    "title": "第4章: JavaScriptの基本",
+    "description": [
+        {
+            "type": "p",
+            "text": "JavaScriptは、Webページに動的な要素を加えるためのスクリプト言語です。この章では、JavaScriptの基本的な要素を学びます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "JavaScriptとは何か",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptは、Webブラウザ上で動作するプログラミング言語です。ユーザーの操作に応じて、Webページの内容を動的に変更したり、アニメーションを作成したりすることができます。"
+                    ]
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "変数とデータ型",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "変数はデータを保存するための「箱」のようなものです。JavaScriptでは、`let`や`const`を使って変数を宣言します。また、データにはさまざまな型（数値、文字列、ブール値など）があります。第6章で詳しく説明します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let name = \"Alice\";  // 文字列型\nconst age = 30;      // 数値型\nlet isStudent = true; // ブール型"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "演算子と計算",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptでは、演算子を使って数値を計算したり、文字列を結合することができます。以下は基本的な演算子の例です。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "足し算: `+`",
+                        "引き算: `-`",
+                        "掛け算: `*`",
+                        "割り算: `/`"
+                    ],
+                    "ordered": false
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let result = 10 + 5; // 結果は15\nlet result = \"10\" + 5; // 結果は105\nlet result = \"10\" - 5; // 結果は5\nlet result = \"10\" * 5; // 結果は50\nlet result = \"10\" * 5 + \"3\"; // 結果は503"
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "条件分岐（if文、else文）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "条件に応じて異なる処理を実行するために、条件分岐を使います。`if`文と`else`文を使用して、特定の条件が満たされた場合にのみコードを実行することができます。第8章で詳しく説明します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let age = 20;\nif (age >= 18) {\n    console.log(\"成人です\");\n} else {\n    console.log(\"未成年です\");\n}"
+                }
+            ],
+            "id": 4
+        },
+        {
+            "title": "繰り返し処理（for、while）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "繰り返し同じ処理を行いたい場合には、ループを使います。`for`ループや`while`ループを使って、指定回数または条件が満たされるまで処理を繰り返します。こちらも第8章で詳しく説明します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// forループの例\nfor (let i = 0; i < 5; i++) {\n    console.log(i);\n}\n\n// whileループの例\nlet count = 0;\nwhile (count < 5) {\n    console.log(count);\n    count++;\n}"
+                }
+            ],
+            "id": 5
+        },
+        {
+            "title": "関数の基本（関数宣言、関数式、アロー関数）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "関数は、複数の命令をまとめて実行できる便利な仕組みです。関数を定義しておけば、必要なときに何度でも呼び出すことができます。第9章で詳しく説明します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// 関数宣言の例\nfunction greet() {\n    console.log(\"こんにちは\");\n}\n\n// 関数式の例\nconst sayHello = function() {\n    console.log(\"Hello\");\n};\n\n// アロー関数の例\nconst add = (a, b) => {\n    return a + b;\n};"
+                }
+            ],
+            "id": 6
+        }
+    ],
+    "more":[
+            {
+                "content": [
+                    {
+                        "type": "p",
+                        "paragraphs": [
+                            "ここでは、JavaScriptの演算子の中でもよく使われるものや、少し応用的な演算子について紹介します。"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "1. 複合代入演算子 `+=`, `-=`, `*=`, `/=`",
+                "content": [
+                    {
+                        "type": "p",
+                        "paragraphs": [
+                            "複合代入演算子は、変数に対して演算を行った結果を、その変数に再度代入するために使います。以下は`+=`を使った例です。"
+                        ]
+                    },
+                    {
+                        "type":"code",
+                        "language":"javascript",
+                        "content":"let score = 10;\nscore += 5;  // scoreは15になります"
+                    },
+                    {
+                        "type":"p",
+                        "paragraphs":[
+                            "他の演算子も同様に動作します。"
+                        ]
+                    },
+                    {
+                        "type":"list",
+                        "liststyle": "unordered",
+                        "items":[
+                            "`-=`: 引き算して結果を変数に代入する",
+                            "`*=`: 掛け算して結果を変数に代入する",
+                            "`/=`: 割り算して結果を変数に代入する"
+                        ]
+                    }
+                ],
+                "id": 1
+            },
+            {
+                "title": "2. インクリメント `++` と デクリメント `--`",
+                "content": [
+                    {
+                        "type": "p",
+                        "paragraphs": [
+                            "`++`と`--`は、数値を1ずつ増やしたり減らしたりするための演算子です。"
+                        ]
+                    },
+                    {
+                        "type":"code",
+                        "language":"javascript",
+                        "content":"let count = 0;\ncount++;  // countは1になります\ncount--;  // countは再び0になります"
+                    },
+                    {
+                        "type":"p",
+                        "paragraphs":[
+                            "`++`や`--`は、変数の前に置くか後に置くかで挙動が異なります。前置の場合は、まずインクリメントまたはデクリメントが行われ、その結果が返されます。後置の場合は、元の値が返された後にインクリメントやデクリメントが行われます。"
+                        ]
+                    }
+                ],
+                "id": 2
+            },
+            {
+                "title": "3. べき乗演算子 `**`",
+                "content": [
+                    {
+                        "type": "p",
+                        "paragraphs": [
+                            "JavaScriptでは、`**`を使って数値のべき乗を計算できます。例えば、2の3乗は以下のように計算できます。"
+                        ]
+                    },
+                    {
+                        "type":"code",
+                        "language":"javascript",
+                        "content":"let result = 2 ** 3;  // resultは8になります"
+                    }
+                ],
+                "id": 3
+            },
+            {
+                "title": "4. 論理演算子",
+                "content": [
+                    {
+                        "type": "p",
+                        "paragraphs": [
+                            "論理演算子は、条件を組み合わせて論理的な判断を行うために使用されます。主にブール値（true または false）を扱い、複数の条件を評価する際に役立ちます。"
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "liststyle": "unordered",
+                        "items": [
+                            "AND (`&&`): 両方の条件が true の場合に true を返す",
+                            "OR (`||`): どちらかの条件が true の場合に true を返す",
+                            "NOT (`!`): true を false に、false を true に反転する"
+                        ]
+                    },
+                    {
+                        "type": "code",
+                        "language": "javascript",
+                        "content": "// AND (&&) の例\nlet a = true;\nlet b = false;\nconsole.log(a && b); // false\n\n// OR (||) の例\nconsole.log(a || b); // true\n\n// NOT (!) の例\nconsole.log(!a); // false"
+                    }
+                ],
+                "id": 4
+            },            
+            {
+                "title": "5. その他の演算子",
+                "content": [
+                    {
+                        "type": "p",
+                        "paragraphs": [
+                            "以下のような演算子もよく使われます："
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "liststyle": "unordered",
+                        "items": [
+                            {
+                                "text": "`%`（剰余演算子）",
+                                "details": "割り算の余りを求める演算子。",
+                                "sample": "`10 % 3` の結果は `1`"
+                            },
+                            {
+                                "text": "`==` と `===`（等価演算子）",
+                                "details": "`==` は型の違いを無視して比較し、`===` は型も含めて厳密に比較する。",
+                                "sample": "`5 == '5'` は `true`、`5 === '5'` は `false`"
+                            },
+                            {
+                                "text": "`!=` と `!==`（不等価演算子）",
+                                "details": "`!=` は型の違いを無視して比較し、`!==` は型も含めて厳密に比較する。",
+                                "sample": "`5 != '5'` は `false`、`5 !== '5'` は `true`"
+                            },
+                            {
+                                "text": "`>`（大なり演算子）",
+                                "details": "左辺が右辺より大きい場合に `true` を返す。",
+                                "sample": "`10 > 5` の結果は `true`"
+                            },
+                            {
+                                "text": "`<`（小なり演算子）",
+                                "details": "左辺が右辺より小さい場合に `true` を返す。",
+                                "sample": "`10 < 5` の結果は `false`"
+                            },
+                            {
+                                "text": "`>=`（大なりイコール演算子）",
+                                "details": "左辺が右辺以上なら `true` を返す。",
+                                "sample": "`10 >= 10` の結果は `true`"
+                            },
+                            {
+                                "text": "`<=`（小なりイコール演算子）",
+                                "details": "左辺が右辺以下なら `true` を返す。",
+                                "sample": "`10 <= 5` の結果は `false`"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "code",
+                        "language": "javascript",
+                        "content": "// 剰余演算子\nconsole.log(10 % 3); // 1\n\n// 等価・不等価演算子\nconsole.log(5 == '5');  // true（型を無視）\nconsole.log(5 === '5'); // false（型も比較）\nconsole.log(5 != '5');  // false（型を無視）\nconsole.log(5 !== '5'); // true（型も比較）\n\n// 大小比較演算子\nconsole.log(10 > 5);  // true\nconsole.log(10 < 5);  // false\nconsole.log(10 >= 10); // true\nconsole.log(10 <= 5);  // false"
+                    }
+                ],
+                "id": 5
+            }                 
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "title": "演習1: HTMLとCSSでページを作ろう",
+    "description": [
+        {
+            "type": "p",
+            "paragraphs":[
+                "この演習では、HTMLとCSSを使用してシンプルなWebページを作成します。以下のコードをコピーして、自分のページを作ってください。ページには見出し、段落、ボタン、リストなどが含まれます。",
+                "コピペで使えるHTMLとCSSの例を示しますので、コピーして自分のHTMLファイルとCSSファイルに貼り付けてください。",
+                "構造がわかったら、自身で書き換えてみましょう。書き換えた部分が思った通りに表示されるかどうか、試してみてください。思った通りに表示されない場合には、どこかにエラーがあります。VScodeなどのコードエディタでファイルを作成するとエラーを見つけやすくなります。"
+            ] 
+        }
+    ],
+    "sections": [
+        {
+            "title": "HTMLファイル",
+            "content": [
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>\u79c1\u306eWeb\u30da\u30fc\u30b8</title>\n    <link rel=\"stylesheet\" href=\"style.css\"> //\u3053\u3053\u3067\u53c2\u7167\u3059\u308bcss\u3092\u6307\u5b9a\u3057\u3066\u3044\u307e\u3059\n</head>\n<body>\n\n    <header>\n        <h1>\u79c1\u306e\u6700\u521d\u306eWeb\u30da\u30fc\u30b8</h1>\n    </header>\n\n    <nav>\n        <ul>\n            <li><a href=\"#about\">\u81ea\u5df1\u7d39\u4ecb</a></li>\n            <li><a href=\"#hobbies\">\u8da3\u5473</a></li>\n            <li><a href=\"#contact\">\u304a\u554f\u3044\u5408\u308f\u305b</a></li>\n        </ul>\n    </nav>\n\n    <section id=\"about\">\n        <h2>\u81ea\u5df1\u7d39\u4ecb</h2>\n        <p>\u3053\u3093\u306b\u3061\u306f\uff01\u79c1\u306fWeb\u958b\u767a\u306b\u8208\u5473\u3092\u6301\u3064\u5b66\u751f\u3067\u3059\u3002</p>\n    </section>\n\n    <section id=\"hobbies\">\n        <h2>\u8da3\u5473</h2>\n        <ul>\n            <li>\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0</li>\n            <li>\u8aad\u66f8</li>\n            <li>\u97f3\u697d\u9451\u8cde</li>\n        </ul>\n    </section>\n\n    <section id=\"contact\">\n        <h2>\u304a\u554f\u3044\u5408\u308f\u305b</h2>\n        <p>\u3054\u8cea\u554f\u3084\u30b3\u30e1\u30f3\u30c8\u304c\u3042\u308c\u3070\u3001\u4ee5\u4e0b\u306e\u30d5\u30a9\u30fc\u30e0\u304b\u3089\u3054\u9023\u7d61\u304f\u3060\u3055\u3044\u3002</p>\n        <form action=\"#\" method=\"post\">\n            <label for=\"name\">\u540d\u524d:</label>\n            <input type=\"text\" id=\"name\" name=\"name\" required><br>\n\n            <label for=\"email\">\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9:</label>\n            <input type=\"email\" id=\"email\" name=\"email\" required><br>\n\n            <label for=\"message\">\u30e1\u30c3\u30bb\u30fc\u30b8:</label><br>\n            <textarea id=\"message\" name=\"message\" rows=\"4\" cols=\"50\" required></textarea><br>\n\n            <button type=\"submit\">\u9001\u4fe1</button>\n        </form>\n    </section>\n\n    <footer>\n        <p>\u00a9 2024 \u79c1\u306eWeb\u30da\u30fc\u30b8. All rights reserved.</p>\n    </footer>\n\n</body>\n</html>"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "CSSファイル（style.css）",
+            "content": [
+                {
+                    "type": "code",
+                    "language": "css",
+                    "content":"/* style.css */\nbody {\n    font-family: Arial, sans-serif;\n    margin: 0;\n    padding: 0;\n    background-color: #f9f9f9;\n}\n\nheader {\n    background-color: #4CAF50;\n    color: white;\n    text-align: center;\n    padding: 20px 0;\n}\n\nnav ul {\n    background-color: #333;\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    text-align: center;\n}\n\nnav ul li {\n    display: inline;\n    margin-right: 15px;\n}\n\nnav ul li a {\n    color: white;\n    text-decoration: none;\n}\n\nsection {\n    padding: 20px;\n    margin: 20px;\n    background-color: white;\n    border-radius: 8px;\n}\n\nfooter {\n    background-color: #333;\n    color: white;\n    text-align: center;\n    padding: 10px;\n}\n\nbutton {\n    background-color: #4CAF50;\n    color: white;\n    border: none;\n    padding: 10px 20px;\n    border-radius: 5px;\n    cursor: pointer;\n}\n\nbutton:hover {\n    background-color: #45a049;\n}"
+                }
+            ]
+        },
+        {
+            "title": "JSファイル（script.js）",
+            "content": [
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content":"document.addEventListener(\"DOMContentLoaded\", function() {\n    const button = document.getElementById(\"myButton\");\n    button.addEventListener(\"click\", function() {\n        alert(\"\u30dc\u30bf\u30f3\u304c\u30af\u30ea\u30c3\u30af\u3055\u308c\u307e\u3057\u305f\uff01\");\n    });\n});"
+                }
+            ]
+        },
+
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        "実際に動かしてみましょう"
+                    ]
+
+                },
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        "上記のコードをコピーして、自分のHTMLファイルとCSSファイルに貼り付けたら、ブラウザで開いて正しく表示されることを確認しましょう。"
+                    ]
+
+                }
+            ],
+            "id": 2
+        }

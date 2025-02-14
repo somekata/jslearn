@@ -1,0 +1,75 @@
+{
+    "title": "JavaScriptの配列とオブジェクトのアクセス",
+    "description": [
+        "JavaScriptでは、データを配列またはオブジェクトとして管理することができます。",
+        "配列は順序のあるデータの集合であり、オブジェクトはキーと値のペアを持つデータ構造です。",
+        "このファイルでは、配列とオブジェクトのアクセス方法や操作を紹介します。"
+    ],
+    "sections": [
+        {
+            "title": "配列へのアクセス",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "配列は「番号付きの引き出し」のようなもので、番号（インデックス）を使ってデータを取り出します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let fruits = ['りんご', 'バナナ', 'みかん'];\nconsole.log(fruits[0]); // りんご\nconsole.log(fruits[1]); // バナナ\nconsole.log(fruits[2]); // みかん"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "ポイント：番号は0から始まります。データを取り出すときは 配列名[番号] を使います。"
+                    ],
+                    "attributes": {
+                        "class": "left"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "オブジェクトへのアクセス",
+            "content": []
+        },
+        {
+            "title": "即時実行関数式 (IIFE)",
+            "content": []
+        },
+        {
+            "title": "配列とオブジェクトの分割代入",
+            "content": []
+        },
+        {
+            "title": "テンプレートリテラル",
+            "content": []
+        },
+        {
+            "title": "配列操作の短縮",
+            "content": []
+        },
+        {
+            "title": "Optional Chaining (?.)",
+            "content": []
+        },
+        {
+            "title": "デフォルト値付きの関数引数",
+            "content": []
+        },
+        {
+            "title": "複雑なデータ構造へのアクセス",
+            "content": []
+        },
+        {
+            "title": "オブジェクトのネストと更新",
+            "content": []
+        },
+        {
+            "title": "配列とオブジェクトの比較",
+            "content": []
+        }
+    ]
+}

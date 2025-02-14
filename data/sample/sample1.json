@@ -1,0 +1,23 @@
+{
+    "title": "コードサンプル",
+    "description": [
+        {
+            "type": "p",
+            "text": "この付録では、HTML・CSS・JavaScript のサンプルコードをタブで切り替えて表示し、クリップボードにコピーできます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "HTML",
+            "content": []
+        },
+        {
+            "title": "CSS",
+            "content": []
+        },
+        {
+            "title": "JavaScript",
+            "content": []
+        }
+    ]
+}

@@ -1,0 +1,442 @@
+{
+    "title": "コラム2: 便利なツール",
+    "description": [
+        {
+            "type": "p",
+            "paragraphs": [
+                "必須ではないけれども、あると便利なツールをご紹介します。"
+            ]
+        }
+    ],
+    "sections": [
+        {
+            "title": "1. Visual Studio Code (VSCode)",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "VSCodeはJavaScriptを学習する際に非常に便利なコードエディタです。無料で使えるうえに、HTML、CSS、JavaScriptの開発に必要な多くの機能を持っています。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"インストール手順"
+                    }
+                },
+                {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        {
+                            "text": "公式サイトにアクセス",
+                            "details": "VSCodeの公式サイトにアクセスします。"
+                        },
+                        {
+                            "text": "インストーラをダウンロード",
+                            "details": "使用しているOS（Windows、macOS、Linux）に対応するインストーラをダウンロードします。"
+                        },
+                        {
+                            "text": "インストール実行",
+                            "details": "ダウンロードしたインストーラを開き、インストールを実行します。"
+                        },
+                        {
+                            "text": "初期設定",
+                            "details": "VSCodeを起動し、初期設定を行います。"
+                        },
+                        {
+                            "text": "拡張機能を追加",
+                            "details": "「拡張機能」タブから、HTML、CSS、JavaScript関連の拡張機能をインストールします。"
+                        }
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"便利な使い方"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Enmetという自動入力機能が便利です。少し面倒なタグ付けを短縮することが可能です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "div.container>ul>li*5"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "と入力してTabまたはEnterを押すと、次のように展開されます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<div class=\"container\">\n    <ul>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n    </ul>\n</div>"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"おすすめの拡張機能"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "以下の拡張機能をインストールすることで、コード入力やプログラム開発がよりスムーズになります。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "liststyle": "unordered",
+                    "items": [
+                        {
+                            "text": "Prettier - Code formatter",
+                            "details": "コードの自動フォーマットを行い、見やすく保つツールです。Windows/LinuxではShift + Alt + F、MacではShift + Option + Fでフォーマットします。また、設定で、Format On Saveの状態にしておくと、ファイルを保存するたびにPrettierが自動でコードをフォーマットしてくれます。"
+                        },
+                        {
+                            "text": "Live Server",
+                            "details": "HTMLファイルをリアルタイムでブラウザに反映し、変更を即座に確認できます。VSCodeの右下に「Go Live」というボタンが表示されます。このボタンをクリックすると、自動的にブラウザが起動し、ローカルサーバーでファイルがプレビューされます。"
+                        },
+                        {
+                            "text": "JavaScript (ES6) code snippets",
+                            "details": "JJavaScriptの効率的なコーディングをサポートするコードスニペット集です。"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "2. JSAnywhereアプリのインストール方法",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JSAnywhereは、モバイル端末でもJavaScriptコードを簡単に実行できる便利なアプリです。オンラインのコードエディタとしてだけでなく、アプリとしても利用可能です。以下は、iOSとAndroidのインストール方法です。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"iOS端末の場合（App Store）"
+                    }
+                 },
+                 {
+                    "type": "p",
+                    "paragraphs": [
+                        "iPhoneやiPadでJSAnywhereを使用するには、App Storeからインストールすることができます。以下の手順でアプリをダウンロードし、インストールを行ってください。"
+                    ]
+                 },
+                 {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        "iPhoneまたはiPadでApp Storeを開く。",
+                        "検索バーに「JSAnywhere」と入力して検索。",
+                        "JSAnywhereアプリが表示されたら、「入手」ボタンをタップしてインストール。",
+                        "インストールが完了したら、アプリを開いてすぐにJavaScriptのコーディングを始められます。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"Android端末の場合（Google Play）"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Android端末では、Google PlayからJSAnywhereアプリをインストールすることができます。以下の手順に従ってインストールを行ってください。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        "AndroidスマートフォンやタブレットでGoogle Playを開きます。",
+                        "検索バーに「JSAnywhere」と入力して検索します。",
+                        "表示されたJSAnywhereアプリを選択し、「インストール」をタップします。" ,
+                        "インストールが完了したら、アプリを起動してすぐにJavaScriptの実行環境を使い始めることができます。"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "3. Plicyへの登録と公開手順",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Plicyは、ゲームやアプリを公開できるプラットフォームで、JavaScriptを使って作成したプロジェクトを簡単に共有できます。自身の開発したコードを公開し、他のユーザーにプレイしてもらうことができます。登録や公開方法は以下の通りです。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        "Plicy公式サイトにアクセスし、無料アカウントを作成。",
+                        "アカウント作成後、プロジェクトをzipファイルとしてアップロード。",
+                        "公開設定を行い、ゲームやアプリをPlicy上でシェアできます。"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "4. GitHubのアカウント取得と公開手順",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "GitHubは、ソースコードを保存・管理・共有できるプラットフォームです。以下の手順でアカウントを作成し、自分のプロジェクトを公開できます。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        "GitHub公式サイトにアクセスし、無料アカウントを作成。",
+                        "アカウント作成後、リポジトリ（プロジェクトフォルダ）を作成。",
+                        "作成したリポジトリにソースコードをアップロード（GitコマンドまたはWebインターフェースを利用）。",
+                        "リポジトリの公開設定を「Public」に変更し、他のユーザーとコードを共有可能。",
+                        "GitHub Pagesを使用することで、Webサイトとしてプロジェクトを公開することも可能。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "これにより、簡単に自身のコードやページをオンラインで公開し、オープンソースコミュニティに参加できます。"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "5. GitBashのインストールと使用方法",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "GitBashは、Git操作やコマンドライン作業を簡単に行えるWindows向けのツールです。以下の手順でインストールして使用します。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"インストール手順"
+                    }
+                },
+                {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        "Git公式サイトにアクセスします。",
+                        "Windows用のGitをダウンロードしてインストールします。",
+                        "インストール中、デフォルトエディタやパス設定を確認します（推奨: Visual Studio Code）。",
+                        "インストール完了後、Git Bashを起動します。"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "GitBashの使用方法",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Gitのバージョン確認やJavaScriptの実行方法を解説します。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        {
+                            "text": "Gitのバージョン確認",
+                            "details": "git --version を入力し、インストールされているGitのバージョンを確認します。"
+                        },
+                        {
+                            "text": "JavaScriptの実行",
+                            "details": "Node.jsをインストールした後、node fileName.js を実行することでJavaScriptコードを実行できます。"
+                        }
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "以下のコードをGitBashで実行した際の出力例を示します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let arr1 = [1, 2, 3, 4];\nlet sliced = arr1.slice(1, 2);\nconsole.log(`sliced:${sliced}`);\nconsole.log(\"sliced:\", sliced);"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "このスクリプトを test.js として保存し、VSCodeのTERMINALで以下のように実行します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "bash",
+                    "content": "ykaneko@YKanekoPC MINGW64 ~/<現在のディレクトリ>\n$ node test.js"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "すると、TERMINALには以下のように出力されます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "bash",
+                    "content": "sliced:2\nsliced: [ 2 ]"
+                }
+            ]
+        },
+        {
+            "title": "6. Google Colaboratoryの使用方法",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Google Colaboratory（Google Colab）は、Pythonコードをブラウザ上で実行できる無料のクラウド環境です。以下の手順で使用を開始できます。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Google Colaboratory（Google Colab）は、Pythonコードをブラウザ上で実行できる無料のクラウド環境です。以下の手順で使用を開始できます。"
+                    ],
+                    "attributes":{
+                        "boldtext":"開始手順"
+                    }
+                },
+                {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        "Google Colaboratoryにアクセスします。",
+                        "Googleアカウントでログインします。",
+                        "新しいノートブックを作成し、Pythonコードを記述します。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"主な特徴"
+                    }
+                },
+                {
+                    "type": "list",
+                    "ordered": "ol",
+                    "items": [
+                        {
+                            "text":"コードの実行",
+                            "details":"コードセルに print(\"Hello, Google Colab!\") と記述し、再生ボタンをクリック。"
+                        },
+                        {
+                            "text":"ライブラリのインストール",
+                            "details":"!pip install ライブラリ名 で簡単にインストール可能。"
+                        },
+                        {
+                            "text":"データのアップロード",
+                            "details":"ローカルファイルをノートブックにアップロードして使用可能。"
+                        }
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Google Colabはデータ分析や機械学習に適しており、リアルタイムでのコード共有も可能です。 さらに、Google Colabは基本的にはPythonを動かすツールですが、Node.jsを使ってJavaScriptを実行することも可能です。",
+                        "以下のJavaScriptコードをGoogle Colabで動かした際の表示例を示します。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"スクリプト例"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content":"let arr1 = [1, 2, 3, 4];\nlet sliced = arr1.slice(1, 2);\nconsole.log(`sliced:${sliced}`);\nconsole.log(\"sliced:\", sliced);"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "このスクリプトを test.js として保存する際の記述と操作方法を示します。",
+                        "左上の +コード をクリックして、コード入力画面を追加します。ここに以下を入力してください。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "%%writefile test.js\nlet arr1 = [1, 2, 3, 4];\nlet sliced = arr1.slice(1, 2);\nconsole.log(`sliced:${sliced}`);\nconsole.log(\"sliced:\", sliced);"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "左側の実行ボタンを押すと、以下のように表示されます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "bash",
+                    "content": "Writing test.js"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "次に、もう一度 +コード をクリックして、以下を入力します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "bash",
+                    "content": "!node test.js"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "再度、左側の実行ボタンを押すと以下のように表示されます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "bash",
+                    "content": "sliced:2\nsliced: [ 2 ]"
+                }
+            ]
+        }
+    ]
+}

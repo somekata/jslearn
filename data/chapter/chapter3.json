@@ -1,0 +1,172 @@
+{
+    "title": "第3章: CSSの基本",
+    "description": [
+        {
+            "type": "p",
+            "text": "CSS（Cascading Style Sheets）は、Webページにスタイルを適用するための言語です。HTMLで作成したページのデザインやレイアウトを整え、視覚的に魅力的なページを作るために使用されます。この章では、CSSの基本的な書き方、セレクタ、プロパティ、そしてレイアウトの基礎を学んでいきます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "1. CSSの基本的な書き方",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "CSSは、HTML要素にスタイルを適用するために、セレクタとプロパティを使って書かれます。基本的な構文は以下の通りです。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "css",
+                    "content": "セレクタ {\n    プロパティ: 値;\n}"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "例えば、以下のコードはすべての `<h1>` 要素の色を青に設定します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "css",
+                    "content": "h1 {\n    color: blue;\n}"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "外部CSS、内部CSS、インラインCSS",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "CSSをHTMLに適用する方法には、主に以下の3つがあります。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        {
+                            "text": "外部CSS",
+                            "details": "別ファイル（通常は.css拡張子）にスタイルを記述し、HTML内でリンクします（演習1）。"
+                        },
+                        {
+                            "text": "内部CSS",
+                            "details": "HTMLファイルの `<head>` セクション内にスタイルを直接記述します。"
+                        },
+                        {
+                            "text": "インラインCSS",
+                            "details": "HTML要素の `style` 属性にスタイルを記述します。"
+                        }
+                    ],
+                    "ordered": false
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "class": "left",
+                        "boldtext": "内部CSSの例"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "\n<head>\n    <style>\n    p {\n        color: #a0a0a0;\n    }\n    </style>\n</head>"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "class": "left",
+                        "boldtext": "インラインCSSの例"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<p style=\"color:#a0a0a0\">"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "セレクタとプロパティ",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "セレクタは、どのHTML要素にスタイルを適用するかを指定する部分です。以下のセレクタの種類があります。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        {
+                            "text": "タグセレクタ",
+                            "details": "特定のタグにスタイルを適用します。",
+                            "sample": "h1 { color: red; }"
+                        },
+                        {
+                            "text": "クラスセレクタ",
+                            "details": "クラス属性を持つ要素にスタイルを適用します。",
+                            "sample": ".class-name { font-size: 20px; }"
+                        },
+                        {
+                            "text": "IDセレクタ",
+                            "details": "ID属性を持つ要素にスタイルを適用します。",
+                            "sample": "#id-name { margin: 10px; }"
+                        }
+                    ],
+                    "ordered": false
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "レイアウトとデザインの基礎（Flexbox、Grid）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Webページのレイアウトには、FlexboxとCSS Gridがよく使用されます。これらの技術を使うことで、ページ内の要素を効率的に配置し、レスポンシブなデザインを実現することができます。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "boldtext": "Flexboxの例:"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "css",
+                    "content": ".container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}"
+                },
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "boldtext": "Gridの例:"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "css",
+                    "content": ".grid-container {\n    display: grid;\n    grid-template-columns: 1fr 2fr;\n    gap: 10px;\n}"
+                }
+            ],
+            "id": 4
+        }
+    ]
+}

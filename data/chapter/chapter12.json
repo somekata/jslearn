@@ -1,0 +1,96 @@
+{
+    "title": "第12章: オブジェクト指向プログラミング（OOP）",
+    "description": [
+        {
+            "type": "p",
+            "text": "JavaScriptでのオブジェクト指向プログラミング（OOP）の基本は、クラスを使ってオブジェクトを定義することです。クラスを利用することで、コードの再利用性が向上し、より構造的なプログラムを書くことができます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "クラスの定義",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`class` キーワードを使って新しいクラスを作成できます。クラスには `constructor` メソッドがあり、オブジェクトの初期化を行います。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// クラスの定義\nclass Person {\n    constructor(name, age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    greet() {\n        console.log(`こんにちは、${this.name}です！`);\n    }\n}\n\n// クラスからインスタンスを生成\nconst person1 = new Person(\"太郎\", 30);\nperson1.greet();  // \"こんにちは、太郎です！\""
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "クラスの継承",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "クラスの継承を使って、既存のクラスの機能を再利用することができます。`extends` キーワードを使って、別のクラスを拡張できます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// クラスの継承\nclass Student extends Person {\n    constructor(name, age, studentId) {\n        super(name, age);  // 親クラスのコンストラクタを呼び出す\n        this.studentId = studentId;\n    }\n\n    study() {\n        console.log(`${this.name}は勉強中です`);\n    }\n}\n\nconst student1 = new Student(\"次郎\", 20, \"S12345\");\nstudent1.greet();  // \"こんにちは、次郎です！\"\nstudent1.study();  // \"次郎は勉強中です\""
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "オーバーライド（メソッドの上書き）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "オーバーライドとは、子クラスで親クラスのメソッドを上書きすることです。これにより、子クラスで独自の振る舞いを定義できます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// オーバーライド（メソッドの上書き）\nclass Teacher extends Person {\n    constructor(name, age, subject) {\n        super(name, age);\n        this.subject = subject;\n    }\n\n    greet() {\n        console.log(`こんにちは、私は${this.subject}の教師${this.name}です！`);\n    }\n}\n\nconst teacher1 = new Teacher(\"花子\", 40, \"数学\");\nteacher1.greet();  // \"こんにちは、私は数学の教師花子です！\""
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "静的メソッド（static）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "静的メソッドは、インスタンスを作成せずにクラス自体から直接呼び出せるメソッドです。`static` キーワードを使って定義します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// 静的メソッドの定義\nclass MathUtil {\n    static add(a, b) {\n        return a + b;\n    }\n}\n\nconsole.log(MathUtil.add(5, 3));  // 8"
+                }
+            ],
+            "id": 4
+        },
+        {
+            "title": "ゲッターとセッター",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "ゲッター（getter）とセッター（setter）を使うと、プロパティの取得や更新時に特定の処理を挟むことができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// ゲッターとセッター\nclass User {\n    constructor(name) {\n        this._name = name;\n    }\n\n    get name() {\n        return this._name.toUpperCase();  // 取得時に大文字に変換\n    }\n\n    set name(newName) {\n        if (newName.length > 2) {\n            this._name = newName;\n        } else {\n            console.log(\"名前は3文字以上である必要があります。\");\n        }\n    }\n}\n\nconst user = new User(\"Taro\");\nconsole.log(user.name);  // \"TARO\"\nuser.name = \"Jo\";  // \"名前は3文字以上である必要があります。\"\nuser.name = \"Jiro\";\nconsole.log(user.name);  // \"JIRO\""
+                }
+            ],
+            "id": 5
+        }
+    ]
+}

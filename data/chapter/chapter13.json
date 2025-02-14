@@ -1,0 +1,127 @@
+{
+    "title": "第13章: エラーハンドリングと例外処理",
+    "description": [
+        {
+            "type": "p",
+            "text": "エラーハンドリングは、プログラムの予期しない中断を防ぎ、ユーザーエクスペリエンスを向上させるために不可欠です。この章では、さまざまなエラーハンドリングの手法を学びます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "try、catchを使ったエラーハンドリング",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptでは、エラーが発生した場合にプログラムが中断されないようにエラーハンドリングを行います。`try`ブロック内でエラーが発生した場合、そのエラーは`catch`ブロックで捕捉されます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "try {\n    let result = someUndefinedFunction();\n    console.log(result);\n} catch (error) {\n    console.log(\"エラーが発生しました:\", error.message);\n} finally {\n    console.log(\"エラーハンドリングが終了しました\");\n}"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "throwを使ったカスタムエラー",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`throw`キーワードを使って、自分でカスタムエラーを発生させることができます。例えば、ユーザー入力が不正な場合にエラーメッセージをスローすることが可能です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "function checkAge(age) {\n    if (age < 18) {\n        throw new Error(\"年齢は18歳以上でなければなりません\");\n    }\n    return \"年齢が適切です\";\n}\n\ntry {\n    console.log(checkAge(15));\n} catch (error) {\n    console.log(\"エラー:\", error.message);\n}"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "非同期処理のエラーハンドリング",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "非同期処理では、エラーが発生してもすぐにスローされず、Promiseを通じて処理が続行されるため、専用のエラーハンドリング手法が必要です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "async function fetchData(url) {\n  try {\n      const response = await fetch(url);\n      if (!response.ok) {\n          throw new Error(`HTTPエラー: ${response.status}`);\n      }\n      const data = await response.json();\n      console.log(data);\n  } catch (error) {\n      console.log(\"非同期処理中にエラーが発生しました:\", error.message);\n  } finally {\n      console.log(\"データ取得処理が終了しました\");\n  }\n}\n\nfetchData(\"https://api.example.com/data\");"
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "Promiseの.catchを使う",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "Promiseを直接使用する場合、`.catch()`メソッドでエラーを処理できます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "fetch(\"https://api.example.com/data\")\n.then((response) => {\n    if (!response.ok) {\n        throw new Error(`HTTPエラー: ${response.status}`);\n    }\n    return response.json();\n})\n.then((data) => console.log(data))\n.catch((error) => console.log(\"エラー:\", error.message));"
+                }
+            ],
+            "id": 4
+        },
+        {
+            "title": "エラーの種類ごとに処理を分ける",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "エラーの種類によって異なる処理を行うことが可能です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "try {\n  throw new TypeError(\"これは型のエラーです\");\n} catch (error) {\n  if (error instanceof TypeError) {\n      console.log(\"型エラー:\", error.message);\n  } else if (error instanceof ReferenceError) {\n      console.log(\"参照エラー:\", error.message);\n  } else {\n      console.log(\"その他のエラー:\", error.message);\n  }\n}"
+                }
+            ],
+            "id": 5
+        },
+        {
+            "title": "エラーハンドリングのベストプラクティス",
+            "content": [
+                {
+                    "type": "list",
+                    "items": [
+                        {
+                            "text": "予期できるエラーを防ぐ",
+                            "details": "入力値の検証や条件分岐を使用して、発生する可能性のあるエラーを事前に防ぐ。",
+                            "sample": "if (!userInput) {\n    console.log(\"入力が必要です\");\n}"
+                        },
+                        {
+                            "text": "エラーの詳細を記録する",
+                            "details": "重要なエラーは、デバッグのためにログに記録する。",
+                            "sample": "try {\n    // 処理\n} catch (error) {\n    console.error(\"エラーログ:\", error);\n}"
+                        },
+                        {
+                            "text": "ユーザーへのフィードバックを工夫する",
+                            "details": "エラー時にユーザーへ適切なメッセージを表示することで、混乱を避ける。"
+                        },
+                        {
+                            "text": "再スローを活用する",
+                            "details": "必要に応じてエラーをキャッチしても、処理を継続せず再スローする。",
+                            "sample": "try {\n    // 処理\n} catch (error) {\n    console.log(\"処理中にエラー:\", error.message);\n    throw error; // 再スロー\n}"
+                        }
+                    ],
+                    "ordered": false
+                }
+            ],
+            "id": 6
+        }
+    ]
+}

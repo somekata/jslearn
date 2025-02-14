@@ -1,0 +1,268 @@
+{
+    "title": "第8章: 条件分岐と繰り返し処理",
+    "description": [
+        {
+            "type": "p",
+            "text": "JavaScriptでは、条件に応じて異なる処理を行うために「条件分岐」を使用します。また、特定の処理を繰り返すために「繰り返し処理（ループ）」を使用します。この章では、条件分岐と繰り返し処理の基本を学びます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "1. 条件分岐（if、else if、else）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "条件分岐は、特定の条件が真（true）であるかどうかに基づいてコードの流れを制御します。最も一般的な方法は、`if`文を使った条件分岐です。さらに複雑な条件には、`else if`や`else`を組み合わせて使用します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let age = 20;\n\nif (age >= 18) {\n    console.log(\"成人です\");\n} else if (age >= 13) {\n    console.log(\"ティーンエイジャーです\");\n} else {\n    console.log(\"子供です\");\n}"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[""],
+                    "attributes":{
+                        "boldtext":"条件式に基づく処理"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`if`文の中で使われる条件は、比較演算子（`==`, `===`, `!=`, `!==`, `>`など）を使って書かれます。条件が`true`の場合、そのブロックのコードが実行されます。複数の条件を使いたい場合は、論理演算子（`&&`, `||`, `!`）を使って条件を組み合わせることができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let score = 85;\nif (score >= 90) {\n    console.log(\"優秀です\");\n} else if (score >= 70 && score < 90) {\n    console.log(\"良い成績です\");\n} else {\n    console.log(\"もっと頑張りましょう\");\n}"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "2. switch-case構文",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`switch-case`構文は、特定の値に基づいて異なる処理を実行したい場合に使います。この構文は、複数の`if-else`文を簡潔にまとめるのに適しています。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let day = 3;\n\nswitch (day) {\n    case 1:\n        console.log(\"月曜日\");\n        break;\n    case 2:\n        console.log(\"火曜日\");\n        break;\n    case 3:\n        console.log(\"水曜日\");\n        break;\n    default:\n        console.log(\"不明な曜日\");\n}"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[""],
+                    "attributes":{
+                        "boldtext":"if文で書いた場合"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`switch-case`構文は簡潔に書ける一方、同じ処理を`if-else`文で書くことも可能です。以下は、同じロジックを`if-else`文で書いた例です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let day = 3;\nif (day === 1) {\n    console.log(\"月曜日\");\n} else if (day === 2) {\n    console.log(\"火曜日\");\n} else if (day === 3) {\n    console.log(\"水曜日\");\n} else {\n    console.log(\"不明な曜日\");\n}"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "3. 三項演算子",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "三項演算子（条件演算子）は、`if-else`文を1行で書ける簡潔な構文です。形式は`条件式 ? 真の場合の値 : 偽の場合の値`です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let age = 20;\nlet status = (age >= 18) ? \"成人\" : \"未成年\";\nconsole.log(status);"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[""],
+                    "attributes":{
+                        "boldtext":"if文で書いた場合"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "三項演算子の簡潔な書き方に対して、同じ処理を`if-else`文で記述することもできます。以下は、その例です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let age = 20;\net status;\nif (age >= 18) {\n    status = \"成人\";\n} else {\n    status = \"未成年\";\n}\nconsole.log(status); // 成人"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[""],
+                    "attributes":{
+                        "boldtext":"ネストされた三項演算子の例"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "三項演算子は簡潔に条件分岐を書けますが、複数の条件がある場合にはネストすることもできます。以下は、年齢に基づいて「未成年」「成人」「高齢者」を分類する例です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let age = 70;\nlet category = (age < 18) ? \"未成年\" : (age < 65) ? \"成人\" : \"高齢者\";\nconsole.log(category); // 高齢者"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[""],
+                    "attributes":{
+                        "boldtext":"if文で書いた場合"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "ネストされた三項演算子と同じ処理を、`if-else`文で書くこともできます。以下は、その例です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let age = 70;\nlet category;\nif (age < 18) {\n     category = \"未成年\"; \n} else if (age < 65) {\n    category = \"成人\"; \n} else {\n  category = \"高齢者\"; }\nconsole.log(category); // 高齢者"
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "4. 論理演算子を利用した条件分岐",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "論理演算子を使って条件分岐を簡潔に書くことができます。"
+                    ]
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[""],
+                    "attributes":{
+                        "boldtext":"AND (&&) 演算子"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "条件が真の場合にのみ評価を実行します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const loggedIn = true;\nconst message = loggedIn && \"Welcome, User!\";\nconsole.log(message); // \"Welcome, User!\""
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[""],
+                    "attributes":{
+                        "boldtext":"OR (||) 演算子"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "条件が偽の場合にデフォルト値を設定します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const input = null;\nconst result = input || \"Default value\";\nconsole.log(result); // \"Default value\""
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[""],
+                    "attributes":{
+                        "boldtext":"Nullish Coalescing Operator (??)"
+                    }
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`null` または `undefined` の場合にデフォルト値を設定します。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const input = 0; // falsy value but not null or undefined\nconst result = input ?? \"Default value\";\nconsole.log(result); // 0"
+                }
+            ],
+            "id": 4
+        },
+        {
+            "title": "5. 繰り返し処理（for、while、do...while）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "繰り返し処理（ループ）は、同じ処理を複数回実行したい場合に使います。JavaScriptでは主に`for`、`while`、`do...while`ループが使われます。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "items":[ 
+                        {
+                            "text": "forループ",
+                            "details":"`for`ループは、決まった回数だけ繰り返すときに使われます。以下は、1から5までの数を出力する例です。"
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "for (let i = 1; i <= 5; i++) {\n    console.log(i);\n}"
+                },
+                {
+                    "type": "list",
+                    "items": [{
+                    "text": "whileループ",
+                    "details":"`while`ループは、条件が`true`である限り処理を繰り返します。条件が満たされなくなるとループが終了します。"
+                    }]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let count = 0;\nwhile (count < 5) {\n    console.log(count);\n    count++;\n}"
+                },
+                {
+                    "type": "list",
+                    "items": [{
+                    "text": "do...whileループ",
+                    "details":"`do...while`ループは、少なくとも一度はループ内の処理を実行してから条件を確認します。最初に必ず一回処理が実行される点が、`while`ループとの違いです。"
+                    }]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let num = 0;\ndo {\n    console.log(num);\n    num++;\n} while (num < 5);"
+                }
+            ],
+            "id": 6
+        }
+    ]
+}

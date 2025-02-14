@@ -1,0 +1,128 @@
+{
+    "title": "第10章: 関数の応用",
+    "description": [
+        {
+            "type": "p",
+            "text": "第9章までの知識でも、十分に簡単なプログラムを作成することができます。しかし、中級以上のプログラムでは、ベストプラクティスやエラーハンドリングを考慮することが求められます。この章では、関数の応用として、アロー関数やコールバック関数、エラーハンドリングについて学びます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "アロー関数",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "アロー関数（`=>`）は、関数をより簡潔に書くことができる文法です。特にコールバック関数などでよく使われます。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        {
+                            "text": "関数の宣言がシンプル"
+                        },
+                        {
+                            "text": "`this` キーワードが親スコープを参照する"
+                        }
+                    ],
+                    "ordered": false
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// 通常の関数\nconst add = function(a, b) {\n    return a + b;\n};\n\n// アロー関数\nconst addArrow = (a, b) => a + b;"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "コールバック関数",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "コールバック関数は、他の関数に引数として渡される関数で、ある処理が完了した後に呼び出される関数を指定することができます。非同期処理やイベントハンドリングなどでよく使われます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "function greet(name, callback) {\n    console.log(\"こんにちは、\" + name + \"さん！\");\n    setTimeout(callback, 2000);  // 2秒後にコールバック関数を実行\n}\n\nfunction goodbye() {\n    console.log(\"さようなら！\");\n}\n\ngreet(\"太郎\", goodbye);"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "関数式と無名関数",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "関数式を使うと、関数に名前を付けずに無名関数（匿名関数, 名前のない関数）を作成し、それを変数に代入することができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const calBMI = function (weight, height) {\n  return parseFloat((weight / (height * height)).toFixed(1));\n};\n\nconsole.log(calBMI(63, 1.7)); // Expected output: 21.8"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "toFixed() は文字列型を返すため、parseFloat を使って数値に変換できます。Math.round() を使った書き方も可能です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const calBMI = function (weight, height) {\n  return (Math.round(weight / (height * height)) * 10) / 10;\n};\n\nconsole.log(calBMI(63, 1.7)); // Expected output: 21.8"
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "即時関数 (IIFE: Immediately Invoked Function Expression)",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "即時関数とは、関数を定義した直後にその場で実行する関数のことです。通常の関数定義と異なり、IIFE はスコープを隔離するため、グローバル汚染を防ぐのに役立ちます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "(function calBMI (weight, height) {\n  const result = parseFloat((weight / (height * height)).toFixed(1));\n  console.log(result);\n})(63, 1.7); // Expected output: 21.8"
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        {
+                            "text": "定義と同時に実行する。"
+                        },
+                        {
+                            "text": "スコープが閉じられるため、外部から内部の変数にアクセスできない。"
+                        },
+                        {
+                            "text": "グローバル変数を汚染せずに安全に処理を行える。"
+                        }
+                    ],
+                    "ordered": false
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "ES6 以降では、即時関数をアロー関数で書くこともできます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "((weight, height) => {\n  const result = parseFloat((weight / (height * height)).toFixed(1));\n  console.log(result);\n})(63, 1.7); // Expected output: 21.8"
+                }
+            ],
+            "id": 4
+        }
+    ]
+}

@@ -1,0 +1,217 @@
+{
+    "title": "関連用語",
+    "description": [
+        {
+            "type": "p",
+            "paragraphs": [
+                "プログラミングを学ぶ上で、開発環境やネットワークに関する用語を理解しておくことは非常に重要です。ここでは、ターミナルやコマンドプロンプト、シェル、VPN、仮想環境などの関連用語を解説します。"
+            ]
+        }
+    ],
+    "sections": [
+        {
+            "title": "1. ターミナル、コマンドプロンプト、シェル",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "ターミナルは、テキストベースのインターフェースを通じて、コンピュータに直接コマンドを入力して操作するためのツールです。LinuxやmacOSでは「ターミナル」、Windowsでは「コマンドプロンプト」や「PowerShell」が同様の機能を提供します。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "listtype": "unordered",
+                    "items": [
+                        {
+                            "text": "ターミナル",
+                            "details": "コマンドを入力してOSを操作するためのツール。LinuxやmacOSで一般的。"
+                        },
+                        {
+                            "text": "コマンドプロンプト",
+                            "details": "Windowsで使用されるCLI（コマンドラインインターフェース）。"
+                        },
+                        {
+                            "text": "シェル",
+                            "details": "コマンドの解釈を行い、OSとやりとりするプログラム。BashやZshが有名。"
+                        }
+                    ]
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "2. VPN（Virtual Private Network）",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "VPNは、インターネット上で安全な通信を行うための技術。通信が暗号化され、リモートワークやセキュリティが必要な環境で使用されます。"
+                    ]
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "3. 仮想環境",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "仮想環境とは、コンピュータ内に独立したシステムを作成し、特定の開発環境を再現する技術。Pythonのプロジェクトごとに異なるライブラリやパッケージを管理する際に役立ちます。"
+                    ]
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "4. CUI（Character User Interface）とGUI（Graphical User Interface）",
+            "content": [
+                {
+                    "type": "list",
+                    "listtype": "unordered",
+                    "items": [
+                        {
+                            "text": "CUI",
+                            "details": "テキストベースのインターフェース。コマンド入力によってコンピュータを操作。"
+                        },
+                        {
+                            "text": "GUI",
+                            "details": "グラフィカルなインターフェース。アイコンやボタンをクリックして操作。"
+                        }
+                    ]
+                }
+            ],
+            "id": 4
+        },
+        {
+            "title": "5. CPU（Central Processing Unit）とGPU（Graphics Processing Unit）",
+            "content": [
+                {
+                    "type": "list",
+                    "listtype": "unordered",
+                    "items": [
+                        {
+                            "text": "CPU",
+                            "details": "コンピュータの中央処理装置。計算や制御を担当。"
+                        },
+                        {
+                            "text": "GPU",
+                            "details": "グラフィックス処理装置。3Dレンダリングや機械学習に活用。"
+                        }
+                    ]
+                }
+            ],
+            "id": 5
+        },
+        {
+            "title": "6. クロック（Clock）とスレッド（Thread）",
+            "content": [
+                {
+                    "type": "list",
+                    "listtype": "unordered",
+                    "items": [
+                        {
+                            "text": "クロック",
+                            "details": "CPUやGPUの処理速度を示す指標。GHz単位で表される。"
+                        },
+                        {
+                            "text": "スレッド",
+                            "details": "CPUで実行される処理の最小単位。マルチスレッド化で並行処理を向上。"
+                        }
+                    ]
+                }
+            ],
+            "id": 6
+        },
+        {
+            "title": "7. HTML関連用語",
+            "content": [
+                {
+                    "type": "list",
+                    "listtype": "unordered",
+                    "items": [
+                        {
+                            "text": "タグ（Tag）",
+                            "details": "HTMLの基本構造。開始タグと終了タグで要素を囲む。"
+                        },
+                        {
+                            "text": "要素（Element）",
+                            "details": "タグとその内容を含む構造。"
+                        },
+                        {
+                            "text": "属性（Attribute）",
+                            "details": "要素に追加情報を付与するもの。例: id, class, src。"
+                        }
+                    ]
+                }
+            ],
+            "id": 7
+        },
+        {
+            "title": "8. CSS関連用語",
+            "content": [
+                {
+                    "type": "list",
+                    "listtype": "unordered",
+                    "items": [
+                        {
+                            "text": "プロパティ（Property）",
+                            "details": "要素のデザインやスタイルを指定する。例: color, font-size。"
+                        },
+                        {
+                            "text": "プロパティ値（Property Value）",
+                            "details": "プロパティに設定される具体的な値。例: color: red; の red。"
+                        }
+                    ]
+                }
+            ],
+            "id": 8
+        },
+        {
+            "title": "9. JavaScript関連用語",
+            "content": [
+                {
+                    "type": "list",
+                    "listtype": "unordered",
+                    "items": [
+                        {
+                            "text": "オブジェクト（Object）",
+                            "details": "プロパティとメソッドを持つデータ構造。"
+                        },
+                        {
+                            "text": "プロパティ（Property）",
+                            "details": "オブジェクトの持つデータや特徴。例: element.id。"
+                        },
+                        {
+                            "text": "メソッド（Method）",
+                            "details": "オブジェクトに関連付けられた関数。例: element.addEventListener()。"
+                        }
+                    ]
+                }
+            ],
+            "id": 9
+        },
+        {
+            "title": "10. DOM（Document Object Model）関連用語",
+            "content": [
+                {
+                    "type": "list",
+                    "listtype": "unordered",
+                    "items": [
+                        {
+                            "text": "DOM",
+                            "details": "Webページの構造をツリー状に表現し、JavaScriptで操作可能。",
+                            "sample": "`document.getElementById(\"example\")`。"
+                        },
+                        {
+                            "text": "属性とプロパティの違い",
+                            "details": "HTMLの属性は初期値を提供し、プロパティはJavaScriptで操作可能。",
+                            "sample": "`<input id=\"example\" value=\"Hello\" />`の場合、 - 属性: `value=\"Hello\"` - プロパティ: `element.value` (操作可能)"
+                        }
+                    ]
+                }
+            ],
+            "id": 10
+        }
+    ]
+}

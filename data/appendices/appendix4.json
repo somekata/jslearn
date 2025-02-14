@@ -1,0 +1,215 @@
+{
+  "title": "コラム9 - 関連用語",
+  "description": [
+    {
+      "type": "p",
+      "text": "関連用語"
+    }
+  ],
+  "sections": [
+    {
+      "title": "ターミナル、コマンドプロンプト、シェル",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　ターミナルは、テキストベースのインターフェースを通じて、コンピュータに直接コマンドを入力して操作するためのツールです。LinuxやmacOSでは「ターミナル」と呼ばれ、Windowsでは「コマンドプロンプト」や「PowerShell」が同様の機能を提供します。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　コマンドプロンプトは、Windowsで使用されるコマンドラインインターフェース（CLI）です。ユーザーはコマンドを直接入力することで、ファイルの操作、プログラムの実行、ネットワーク設定などを行うことができます。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　シェルは、ユーザーとコンピュータの間を仲介するプログラムで、ターミナルやコマンドプロンプトのようにコマンドを解釈し、OSに指示を伝えます。最も有名なシェルには、Bash（Bourne\n          Again Shell）やZsh（Z Shell）があります。\n        "
+          ]
+        }
+      ],
+      "id": 1
+    },
+    {
+      "title": "VPN（Virtual Private Network）",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　VPNは、インターネット上で安全な通信を行うための技術です。ユーザーがインターネットに接続する際に、自分のIPアドレスを隠し、暗号化された通信を行うことで、プライバシーを保護します。リモートワークやセキュリティが重要な通信において広く使用されています。\n        "
+          ]
+        }
+      ],
+      "id": 2
+    },
+    {
+      "title": "仮想環境",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　仮想環境とは、コンピュータの中にもう一つの独立したシステムを作成し、特定の開発環境を再現する技術です。例えば、Pythonのプロジェクトごとに異なるライブラリやパッケージを管理したい場合、仮想環境を作ることで、それぞれのプロジェクトが独立した環境を持つことができます。\n        "
+          ]
+        }
+      ],
+      "id": 3
+    },
+    {
+      "title": "\n\n            CUI（Character User Interface）とGUI（Graphical User Interface）\n          \n",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　CUIとは、テキストベースでコンピュータを操作するインターフェースのことです。ターミナルやコマンドプロンプトでの操作がこれに当たります。コマンドを入力することでコンピュータに指示を与えるため、直感的ではありませんが、慣れると非常に効率的に操作できます。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　GUIは、グラフィカルなインターフェースで、アイコンやボタン、ウィンドウを使ってコンピュータを操作するものです。一般的なコンピュータやスマートフォンのインターフェースがGUIです。CUIよりも初心者に使いやすいインターフェースです。\n        "
+          ]
+        }
+      ],
+      "id": 4
+    },
+    {
+      "title": "\n\n            CPU（Central Processing Unit）とGPU（Graphics Processing Unit）\n          \n",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　CPUは、コンピュータの「脳」とも言われ、プログラムを実行する中心的な役割を担っています。計算や制御を行う装置で、全てのコンピュータ操作はこのCPUによって処理されます。クロック周波数（GHz）は、CPUの動作速度を示します。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　GPUは、グラフィックスの処理を担当する装置で、特に3Dレンダリングやゲーム、機械学習で重要な役割を果たします。最近では、GPUを使った並列処理が機械学習やデータ解析の分野でも広く活用されています。\n        "
+          ]
+        }
+      ],
+      "id": 5
+    },
+    {
+      "title": "クロック（Clock）とスレッド（Thread）",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　クロックは、CPUやGPUが動作する速度を示す指標です。クロック周波数（GHz）が高いほど、処理速度が速くなりますが、消費電力や発熱も大きくなります。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          　スレッドは、CPUで実行される処理の最小単位です。マルチスレッド化することで、一度に複数の処理を並行して実行することができ、コンピュータの処理能力を最大限に引き出すことができます。\n        "
+          ]
+        }
+      ],
+      "id": 6
+    },
+    {
+      "title": "HTML関連用語",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\nタグ (Tag):\n          HTML要素を定義する基本構造で、開始タグ(``)、終了タグ(``)、および内容から構成されます。\n          例: `<div>`や`<p>`。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n要素 (Element): HTMLタグ全体とその内容を含む構造。\n          例: `<a href=\"https://example.com\">リンク</a>`。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n要素名 (Element Name): タグの名前そのもの。例:\n          `<a>`の要素名は`a`。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n属性 (Attribute):\n          要素に追加情報を付加するためのもの。例: `id`, `class`, `src`。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n属性値 (Attribute Value):\n          属性に設定された具体的な値。例: `id=\"main\"`の`main`。\n        "
+          ]
+        }
+      ],
+      "id": 7
+    },
+    {
+      "title": "CSS関連用語",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\nプロパティ (Property):\n          要素のデザインやスタイルを指定するためのキーワード。例: `color`,\n          `font-size`。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\nプロパティ値 (Property Value):\n          プロパティに設定する具体的な値。例: `color: red;`の`red`。\n        "
+          ]
+        }
+      ],
+      "id": 8
+    },
+    {
+      "title": "JavaScript関連用語",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\nオブジェクト (Object):\n          プロパティとメソッドを持つデータ構造。例:\n          DOMオブジェクトやカスタムオブジェクト。\n          DOMのオブジェクトとJavaScriptのオブジェクトは関係がありますが、意味や用途において異なります。以下にそれぞれの違いを説明します。\n            JavaScriptのオブジェクト\n              \n説明: JavaScriptにおけるデータ構造の一つで、キーと値のペアを持つ汎用的な構造。オブジェクトは、プロパティとメソッドを持つことができます。\n用途: データの格納、操作、再利用可能なコードを作成するための基本的な構造。\n\n\n            例\n            // カスタムオブジェクト\nvar person = {\n  name: \"太郎\",           // プロパティ\n  age: 30,               // プロパティ\n  greet: function() {    // メソッド\n    return \"こんにちは、\" + this.name + \"です。\";\n  }\n};\n\nconsole.log(person.name);  // \"太郎\" (プロパティの取得)\nconsole.log(person.greet());  // \"こんにちは、太郎です。\" (メソッドの呼び出し)\nDOMのオブジェクト\n              \n説明: DOM（Document Object Model）は、HTMLやXMLドキュメントをツリー構造として表現したもの。DOM内の各要素（<div>, <p>など）はJavaScriptのオブジェクトとして表現されます。\n用途: Webページの構造（要素や属性）をJavaScriptで操作するためのインターフェース。\n\n\n// DOMオブジェクトを取得\nvar element = document.getElementById(\"example\");\n\n// DOMプロパティの操作\nelement.textContent = \"新しい内容\"; // プロパティを変更して内容を更新\n\n// DOMメソッドの使用\nelement.classList.add(\"highlight\"); // メソッドを使ってクラスを追加\n\n"
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\nプロパティ (Property):\n          オブジェクトが持つデータや特徴を表すもの。例: `element.id`。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\nメソッド (Method):\n          オブジェクトに関連付けられた関数。例: `element.addEventListener()`。\n        "
+          ]
+        }
+      ],
+      "id": 9
+    },
+    {
+      "title": "DOM (Document Object Model)関連用語",
+      "content": [
+        {
+          "type": "p",
+          "paragraphs": [
+            "\nDOM:\n          ウェブページの構造をツリー状に表現したもの。JavaScriptを使って操作可能。\n          例: `document.getElementById(\"example\")`。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n属性とプロパティの違い:\n          属性はHTMLソースコードに記述され、初期値を提供します。一方、プロパティはDOMオブジェクトとして操作される値です。\n        "
+          ]
+        },
+        {
+          "type": "p",
+          "paragraphs": [
+            "\n          例: `<input id=\"example\" value=\"Hello\" />`の場合、 - 属性:\n          `value=\"Hello\"` - プロパティ: `element.value` (操作可能)\n        "
+          ]
+        }
+      ],
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+    "title": "JavaScriptを始めよう",
+    "preface":[
+        {"id":1,"title":"前書き","file":"preface.json"}
+    ],
+    "chapters": [
+        { "id": 0, "title": "序章: プログラミングの前に", "file": "chapter0.json" },
+        { "id": 1, "title": "第1章: HTML、CSS、JavaScriptの基本", "file": "chapter1.json" },
+        { "id": 2, "title": "第2章: HTMLの基本", "file": "chapter2.json" },
+        { "id": 3, "title": "第3章: CSSの基本", "file": "chapter3.json" },
+        { "id": 4, "title": "第4章: JavaScriptの基本", "file": "chapter4.json" },
+        { "id": 5, "title": "第5章: JavaScriptとHTML/CSSの連携（DOM操作とイベントリスナー）", "file": "chapter5.json" },
+        { "id": 6, "title": "第6章: 変数と定数（let、const、var）", "file": "chapter6.json" },
+        { "id": 7, "title": "第7章: 配列とオブジェクトの操作", "file": "chapter7.json" },
+        { "id": 8, "title": "第8章: 条件分岐と繰り返し処理", "file": "chapter8.json" },
+        { "id": 9, "title": "第9章: 関数の基礎（function、return）", "file": "chapter9.json" },
+        { "id": 10, "title": "第10章: 関数の応用（アロー関数、コールバック関数）", "file": "chapter10.json" },
+        { "id": 11, "title": "第11章: 非同期処理の基礎（Promise、async/await）", "file": "chapter11.json" },
+        { "id": 12, "title": "第12章: オブジェクト指向プログラミング（クラス、継承）", "file": "chapter12.json" },
+        { "id": 13, "title": "第13章: エラーハンドリングと例外処理", "file": "chapter13.json" },
+        { "id": 14, "title": "第14章: JavaScriptにおけるモジュール化（import/export）", "file": "chapter14.json" },
+        { "id": 15, "title": "第15章: コーディングのベストプラクティス", "file": "chapter15.json" },
+        { "id": 16, "title": "第16章: これからのプログラミング", "file": "chapter16.json" }
+    ],
+    "appendices": [
+        { "id": 1, "title": "付録1 HTMLのサンプル", "file": "appendix1.json" },
+        { "id": 2, "title": "付録2 CSSのサンプル", "file": "appendix2.json" },
+        { "id": 3, "title": "付録3 JavaScriptのサンプル", "file": "appendix3.json" },
+        { "id": 4, "title": "付録4 JavaScriptでよく使われるメソッド", "file": "appendix4.json" },
+        { "id": 7, "title": "付録7", "file": "appendix7.json" }       
+    ],
+    "columns": [
+        { "id": 1, "title": "コラム1: 情報1の復習", "file": "column1.json" },
+        { "id": 2, "title": "コラム2: 便利なツール", "file": "column2.json" },
+        { "id": 3, "title": "コラム3: わからないことはChatGPTに聞いてみよう", "file": "column3.json" },
+        { "id": 4, "title": "コラム4: 困った時のMDN", "file": "column4.json" },
+        { "id": 9, "title": "コラム9: JSとPythonの変数、構文、配列の比較", "file": "column9.json" },
+        { "id": 10, "title": "コラム10: 配列操作の名称が直感的ではない理由", "file": "column10.json" },
+        { "id": 12, "title": "コラム12: これからのプログラミング", "file": "column12.json" }
+    ],
+    "samples": [
+        { "id": 1, "title": "コードサンプル", "file": "sample1.json" }
+    ],
+    "exercises": [
+        { "id": 1, "title": "演習1: HTMLとCSSでページを作ろう", "file": "exercise1.json" },
+        { "id": 2, "title": "演習2: JavaScriptを使って簡単なゲームを作ろう", "file": "exercise2.json" },
+        { "id": 3, "title": "演習3: JavaScriptを使ってツールを作ろう", "file": "exercise3.json" }
+    ],
+    "glossary": [
+        { "id": 1, "title": "関連用語", "file": "glossary1.json" },
+        { "id": 2, "title": "配列の操作", "file": "glossary2.json" },
+        { "id": 3, "title": "オブジェクトの操作", "file": "glossary3.json" },
+        { "id": 4, "title": "配列とオブジェクトに対するアクセス", "file": "glossary4.json" }
+    ],
+    "misc": [
+        { "id": 1, "title": "プログラミングを楽しむ", "file": "misc1.json" },
+        { "id": 2, "title": "プログラミング環境を整えよう", "file": "misc2.json" },
+        { "id": 3, "title": "問題集", "file": "quiz.json" }
+
+    ],
+    "quiz":[
+        {"id":1,"title":"問題1","file":"quiz1.json"},
+        {"id":2,"title":"問題2","file":"quiz2.json"}
+    ]
+}

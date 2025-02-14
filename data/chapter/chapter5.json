@@ -1,0 +1,206 @@
+{
+    "title": "第5章: JavaScriptとHTML/CSSの連携",
+    "description": [
+        {
+            "type": "p",
+            "text": "HTMLとCSSは基本的には静的な表示を提供し、表示内容が自動的に変化することはありません。一方、JavaScriptはその静的な表示を動的に変更する役割を果たします。この章では、DOMの操作、イベントハンドリング、フォームとの連携などを学びます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "1. DOM（Document Object Model）の基礎",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptでは、DOM（Document Object Model）を使って、HTML要素やCSSスタイルをリアルタイムに操作できます。DOMはWebページのすべての要素をオブジェクトとして表現し、JavaScriptを通じてこれらを参照・変更できます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const heading = document.getElementById('main-heading');\nheading.textContent = \"新しい見出しテキスト\";"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "上記の例では、document.getElementByIdを使って特定のIDを持つHTML要素を取得し、その内容（テキスト）を動的に変更しています。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "paragraphs":[
+                        "heading.textContent = \"新しい見出しテキスト\"; の代わりに、heading.innerHTML = \"新しい見出しテキスト\"; としても、ほぼ同様の操作ができます。違いは、textContentではシンプルにテキストのみしか表示しませんが、innerHTMLではHTMLで表示することが可能です。"
+                    ],
+                    "attributes": {
+                        "boldtext": "textContent と innerHTML の違い"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "heading.textContent = \"<span style='color:#f00'>赤くする</span>\";\n// → <span style='color:#f00'>赤くする</span> と表示される\n\nheading.innerHTML = \"<span style='color:#f00'>赤くする</span>\";\n// → 赤くする と赤文字で表示される"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "2. イベントハンドリング",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptはユーザーの操作（クリック、キー入力、スクロールなど）に応じてコードを実行できます。これを「イベントハンドリング」と呼びます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const button = document.getElementById('myButton');\nbutton.addEventListener('click', function() {\n    alert('ボタンがクリックされました！');\n});"
+                },
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "上記のコードでは、ボタンがクリックされたときにアラートが表示されるようになっています。addEventListenerを使うことで、複数のイベントリスナーを同じ要素に追加することが可能です。"
+                    ]
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        "イベントハンドリングの仕組みを利用しなくても、ボタンに直接関数を紐づける方法があります。以下の例では、onclick 属性を使用して、ボタンをクリックした際に指定した関数が実行されるようにしています。"
+                    ],
+                    "attributes": {
+                        "boldtext": "ボタンに関数を紐づける方法"
+                    }
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "boldtext": "HTML"
+                    }
+                },
+                {
+                    "type":"code",
+                    "language":"html",
+                    "content":"<span id=\"target\">ここが変化します</span>\n<button onclick=\"pushButton()\">押してください</button>"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes": {
+                        "boldtext": "JS"
+                    }
+                },
+                {
+                    "type":"code",
+                    "language":"javascript",
+                    "content":"function pushButton() {\n  let targetText = document.getElementById('target');\n  targetText.textContent = \"ボタンが押されました\";\n}"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        "上記のコードでは、ボタンがクリックされたときに<span id=\"target\">タグの`ここが変化します`というテキストが、`ボタンが押されました`というテキストに変化します。"
+                    ]
+                }
+
+            ],
+            "id": 2
+        },
+        {
+            "title": "3. 簡単な操作：ボタンやフォームとの連携",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptでフォームやボタンと連携することで、動的なユーザーインタラクションを作成することができます。例えば、フォームに入力された値を取得し、その値を使ってページ上の他の要素を更新することが可能です。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const input = document.getElementById('myInput');\nconst output = document.getElementById('output');\n\ndocument.getElementById('submitButton').addEventListener('click', function() {\n    output.textContent = input.value;\n});"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        "このコードでは、ユーザーが入力した内容がボタンを押すと表示されるようになっています。"
+                    ]
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "4. コピペで使えるゲームコード例",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptを使って、シンプルなクリックゲームを作成してみましょう。このゲームでは、ボタンをクリックするたびにスコアが増えていきます。"
+                    ]
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"HTML"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "html",
+                    "content": "<!DOCTYPE html>\n<html lang=\"ja\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>クリックゲーム</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <h1>クリックしてスコアを増やそう！</h1>\n    <div id=\"score\">スコア: 0</div>\n    <button id=\"clickButton\">クリック！</button>\n    <script src=\"script.js\"></script>\n</body>\n</html>"
+                },
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        ""
+                    ],
+                    "attributes":{
+                        "boldtext":"JavaScriptファイル（script.js）"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "let score = 0;\nconst scoreElement = document.getElementById('score');\nconst button = document.getElementById('clickButton');\n        \nbutton.addEventListener('click', function() {\n    score++;\n    scoreElement.textContent = '\u30b9\u30b3\u30a2: ' + score;\n});"
+                },
+
+                {
+                    "type":"p",
+                    "paragraphs":[
+                        "上記のコードをコピーして、HTMLファイルとJavaScriptファイルに分けて作成し、ブラウザで動作させてみましょう。"
+                    ]
+                }
+            ],
+            "id": 4
+        },
+        {
+            "title": "わからないことはChatGPTに聞いてみよう",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "プログラミングを学んでいると、不明な単語が出てきたり、コードの意味が分からなかったりと、行き詰まることがよくあります。そんな時に頼りになるのがChatGPTです。わからないことをそのまま質問することで、答えを見つけたり、新しいアイデアを得たりすることができます。もちろん、ChatGPTでも解決できなことはありますが、ブレストをする相手としてとても手ごろだと思います。",
+                        "ChatGPTは、コードのエラー修正、プログラムの書き方、ライブラリの使い方、さらには高度なアルゴリズムの説明まで、多くの場面で役立ちます。以下のような使い方を試してみてください。",
+                        "ChatGPTを使って、質問をシンプルに明確にすることがポイントです。質問の具体性が高いほど、得られる回答も的確になります。"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "コードのバグを見つける",
+                        "アルゴリズムやデータ構造について質問する",
+                        "特定の言語のシンタックスや構文を確認する"
+                    ]
+                }
+            ]
+        }
+    ]
+}

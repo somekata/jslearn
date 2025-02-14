@@ -1,0 +1,89 @@
+{
+    "title": "第9章: 関数の基礎",
+    "description": [
+        {
+            "type": "p",
+            "text": "関数は、特定の処理をまとめて実行するための重要なツールです。JavaScriptの関数は、複数の命令を一つにまとめ、必要に応じて呼び出すことができます。この章では、関数の宣言方法や引数、戻り値について学びます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "関数の宣言と呼び出し",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptでは、`function`キーワードを使って関数を宣言します。関数を呼び出すことで、その関数内に書かれたコードが実行されます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "function greet() {\n    console.log(\"こんにちは！\");\n}\n\n// 関数の呼び出し\ngreet();  // \"こんにちは！\"が出力されます"
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "引数と戻り値",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "関数に引数を渡すことで、柔軟に処理を実行できます。引数は、関数を呼び出す際に値を渡すために使われ、関数内部でその値を使用します。また、関数は`return`文を使って結果を返すことができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "function greetUser(name) {\n    console.log(\"こんにちは、\" + name + \"さん！\");\n}\n\n// 引数を渡して関数を呼び出す\ngreetUser(\"太郎\");  // \"こんにちは、太郎さん！\"が出力されます"
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "function add(a, b) {\n    return a + b;\n}\n\n// 戻り値を受け取って使う\nlet sum = add(5, 3);\nconsole.log(sum);  // 8が出力されます"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "デフォルト値",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "デフォルト値を設定することで、引数が渡されなかった場合や `undefined` が渡された場合に、デフォルトの値を使用することができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "function greet(name = \"Guest\") {\n    console.log(`Hello, ${name}!`);\n}\n\ngreet();                // 出力: Hello, Guest!\ngreet(\"Alice\");         // 出力: Hello, Alice!"
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "関数式とアロー関数",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "JavaScriptでは、関数を変数に格納することができ、これを「関数式」と呼びます。また、アロー関数（`=>`）を使って関数をより簡潔に書くこともできます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const sayHello = function() {\n    console.log(\"Hello!\");\n};\n\n// 関数式の呼び出し\nsayHello();  // \"Hello!\"が出力されます"
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "const multiply = (a, b) => a * b;\n\n// アロー関数の呼び出し\nlet result = multiply(4, 5);\nconsole.log(result);  // 20が出力されます"
+                }
+            ],
+            "id": 4
+        }
+    ]
+}

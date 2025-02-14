@@ -1,0 +1,147 @@
+{
+    "title": "第14章: JavaScriptにおけるモジュール化",
+    "description": [
+        {
+            "type": "p",
+            "text": "JavaScriptでは、コードを再利用しやすくするためにモジュール化することができます。モジュール化されたコードは、`import`と`export`を使って別のファイルから読み込んだり、提供したりできます。"
+        }
+    ],
+    "sections": [
+        {
+            "title": "モジュールの基本",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "モジュールを使うことで、コードの整理がしやすくなり、複数のファイルに分割して管理できるようになります。`export`を使って関数や変数をエクスポートし、`import`を使ってそれらを別のファイルで利用できます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// モジュールのエクスポート\nexport function greet(name) {\n    console.log(`こんにちは、${name}さん！`);\n}\n\n// モジュールのインポート\nimport { greet } from './greetModule.js';\n\ngreet('太郎');  // \"こんにちは、太郎さん！\""
+                }
+            ],
+            "id": 1
+        },
+        {
+            "title": "デフォルトエクスポートと名前付きエクスポート",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`export`には、デフォルトエクスポートと名前付きエクスポートの2つの方法があります。デフォルトエクスポートは1つの値をエクスポートし、名前付きエクスポートは複数の値をエクスポートすることができます。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "attributes": {
+                        "boldtext": "デフォルトエクスポートの例"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// デフォルトエクスポート\nexport default function greet() {\n    console.log(\"こんにちは！\");\n}"
+                },
+                {
+                    "type": "p",
+                    "attributes": {
+                        "boldtext": "名前付きエクスポートの例"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// 名前付きエクスポート\nexport const PI = 3.14;\nexport const multiply = (a, b) => a * b;"
+                }
+            ],
+            "id": 2
+        },
+        {
+            "title": "モジュールのインポート方法",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "エクスポートしたモジュールは、`import`を使って別のファイルで利用できます。デフォルトエクスポートと名前付きエクスポートではインポートの方法が異なります。"
+                    ]
+                },
+                {
+                    "type": "p",
+                    "attributes": {
+                        "boldtext": "デフォルトエクスポートのインポート"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// デフォルトエクスポートのインポート\nimport greet from './greetModule.js';\n\ngreet();  // \"こんにちは！\""
+                },
+                {
+                    "type": "p",
+                    "attributes": {
+                        "boldtext": "名前付きエクスポートのインポート"
+                    }
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// 名前付きエクスポートのインポート\nimport { PI, multiply } from './mathModule.js';\n\nconsole.log(PI);  // 3.14\nconsole.log(multiply(4, 5));  // 20"
+                }
+            ],
+            "id": 3
+        },
+        {
+            "title": "モジュールのエイリアス",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "`as` キーワードを使って、エクスポートされた変数や関数にエイリアス（別名）を付けることができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// エイリアスを使ったインポート\nimport { multiply as mul } from './mathModule.js';\n\nconsole.log(mul(4, 5));  // 20"
+                }
+            ],
+            "id": 4
+        },
+        {
+            "title": "すべてのエクスポートをインポート",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "モジュール内のすべてのエクスポートを1つのオブジェクトにまとめてインポートすることもできます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// すべてのエクスポートをインポート\nimport * as math from './mathModule.js';\n\nconsole.log(math.PI);  // 3.14\nconsole.log(math.multiply(4, 5));  // 20"
+                }
+            ],
+            "id": 5
+        },
+        {
+            "title": "動的インポート",
+            "content": [
+                {
+                    "type": "p",
+                    "paragraphs": [
+                        "通常の`import`は静的インポートですが、`import()` 関数を使うと、必要なタイミングでモジュールを読み込むことができます。"
+                    ]
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "content": "// 動的インポート\nasync function loadModule() {\n    const module = await import('./mathModule.js');\n    console.log(module.PI);  // 3.14\n}\n\nloadModule();"
+                }
+            ],
+            "id": 6
+        }
+    ]
+}
